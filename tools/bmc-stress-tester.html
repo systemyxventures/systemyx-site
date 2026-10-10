@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Model Stress-Tester — The Leverage Point Co</title>
+<meta name="description" content="Your free Business Model Stress-Tester — risk scores, a cascade map, what-if scenarios, an AI-impact read, and the one leverage point to fix first. Paste it into Claude and run it on your own canvas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --ground:#141115; --surface:#1B1720; --surface2:#221E28;
+    --line:#2E2834; --line-soft:#221E28;
+    --ink:#FFFCFF; --ink-soft:#C8C4CC; --muted:#8B8490; --faint:#4D4752;
+    --strategy:#B80C09; --ai:#01BAEF; --ops:#56E39F;
+    --grid:rgba(255,252,255,.025);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{background:var(--ground);}
+  body{
+    background:var(--ground); color:var(--ink);
+    font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,sans-serif;
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+    background-image:
+      linear-gradient(var(--grid) 1px,transparent 1px),
+      linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:36px 36px; min-height:100vh;
+  }
+  a{color:inherit;}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+
+  .topbar{border-bottom:1px solid var(--line-soft);padding:20px 0;}
+  .topbar .wrap{display:flex;align-items:center;gap:12px;}
+  .mark{width:30px;height:30px;border-radius:8px;background:var(--strategy);flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+  .mark span{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;color:var(--ink);letter-spacing:-.02em;}
+  .mark.mark-img{background:transparent;display:block;}
+  .brand{font-weight:600;font-size:15px;letter-spacing:-.01em;}
+  .brand em{color:var(--muted);font-weight:400;font-style:normal;}
+
+  .hero{padding:56px 0 36px;border-bottom:1px solid var(--line-soft);}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--strategy);font-weight:500;margin-bottom:16px;}
+  h1{font-weight:700;font-size:clamp(26px,4.5vw,38px);line-height:1.16;letter-spacing:-.02em;margin-bottom:16px;max-width:22ch;}
+  .golden-thread{color:var(--ink-soft);font-size:16px;line-height:1.65;max-width:56ch;border-left:3px solid var(--strategy);padding-left:16px;}
+
+  section{padding:40px 0;border-bottom:1px solid var(--line-soft);}
+  h2{font-weight:700;font-size:20px;letter-spacing:-.01em;margin-bottom:8px;}
+  .lead{color:var(--ink-soft);font-size:15px;margin-bottom:20px;max-width:60ch;}
+
+  .steps{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:8px;}
+  .steps li{display:flex;gap:14px;align-items:flex-start;}
+  .steps .n{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:500;color:var(--strategy);border:1px solid var(--strategy);border-radius:999px;width:24px;height:24px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+  .steps .t{font-size:14.5px;color:var(--ink-soft);}
+  .steps .t b{color:var(--ink);font-weight:600;}
+
+  .promptwrap{position:relative;margin-top:18px;}
+  .copy-btn{position:absolute;top:12px;right:12px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;background:var(--strategy);color:var(--ink);border:none;border-radius:7px;padding:7px 12px;cursor:pointer;transition:opacity .15s;}
+  .copy-btn:hover{opacity:.88;}
+  pre.prompt{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px 22px;padding-top:44px;overflow-x:auto;white-space:pre-wrap;word-wrap:break-word;font-family:"IBM Plex Mono",monospace;font-size:12.5px;line-height:1.6;color:var(--ink-soft);}
+  pre.prompt .ph{color:var(--ai);}
+
+  .next{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 24px;position:relative;overflow:hidden;}
+  .next::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--strategy);}
+  .tag{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--strategy);border:1px solid var(--strategy);border-radius:999px;padding:3px 9px;}
+  .price{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--ink-soft);margin-left:8px;}
+  .price s{color:var(--faint);margin-right:6px;}
+  .name{font-weight:700;font-size:18px;letter-spacing:-.01em;margin:10px 0 6px;}
+  .tagline{color:var(--ink-soft);font-size:14.5px;line-height:1.55;margin-bottom:18px;max-width:54ch;}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--strategy);color:#141115;font-weight:600;font-size:14px;border-radius:8px;padding:10px 16px;text-decoration:none;transition:opacity .15s,transform .1s;}
+  .btn:hover{opacity:.88;} .btn:active{transform:translateY(1px);}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);}
+  .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+
+  footer{border-top:1px solid var(--line-soft);margin-top:8px;padding:32px 0 40px;}
+  .foot-links{display:flex;flex-wrap:wrap;gap:10px 22px;margin-bottom:18px;}
+  .foot-links a{font-size:13.5px;color:var(--ink-soft);text-decoration:none;}
+  .foot-links a:hover{color:var(--ink);}
+  .foot-note{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--faint);letter-spacing:.04em;line-height:1.7;}
+
+  @media (max-width:600px){ .wrap{padding:0 18px;} .hero{padding:40px 0 28px;} }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="mark" id="brandMark"><span>LP</span></div>
+    <div class="brand">The Leverage Point Co <em>· free tool</em></div>
+  </div>
+</div>
+
+<div class="hero wrap">
+  <div class="eyebrow">Strategy · Free Claude skill</div>
+  <h1>The Business Model Stress-Tester</h1>
+  <p class="golden-thread">Stop filling in the form. Draw the system. This runs the same analysis from the video on your own canvas — risk scores for all nine blocks, a cascade map, three what-if scenarios, an AI-impact read, and the single leverage point to fix first.</p>
+</div>
+
+<section class="wrap">
+  <h2>How to use it</h2>
+  <p class="lead">It's a prompt you run in Claude — no install, nothing to download. About two minutes.</p>
+  <ol class="steps">
+    <li><span class="n">1</span><span class="t"><b>Copy the prompt</b> below.</span></li>
+    <li><span class="n">2</span><span class="t"><b>Paste it into Claude</b> (claude.ai — the free tier is fine).</span></li>
+    <li><span class="n">3</span><span class="t"><b>Add your nine blocks</b> where marked — rough notes in any format work — and send. If you don't have a canvas yet, describe your business and Claude will map it first.</span></li>
+  </ol>
+  <div class="promptwrap">
+    <button class="copy-btn" id="copyBtn" type="button">Copy</button>
+    <pre class="prompt" id="prompt">You're a sharp, systems-oriented analyst stress-testing my business model. I want to know where it's fragile — for real decisions, not an MBA class.
+
+The premise: stop filling in the form; draw the system. A business model canvas isn't nine boxes to fill in — it's nine connected nodes, and the wiring between them is what we're testing. Three anchors: the constraint is the Value Proposition — the reason the machine exists; the feedback signal is Revenue Streams — the market's response to what's been built; the leverage point is the block that fails first and takes the most of the system down with it — usually whichever block is currently preventing value from reaching the customer. That's the one to name at the end.
+
+Keep every section concise and scannable — insight density, not length.
+
+Here is my canvas (rough notes, any format, are fine):
+<span class="ph">[PASTE YOUR NINE BLOCKS HERE — Customer Segments, Value Propositions, Channels, Customer Relationships, Revenue Streams, Key Resources, Key Activities, Key Partners, Cost Structure. Leave out any block you can't describe — the tool will flag it as a gap.]</span>
+
+Run this analysis on my canvas:
+
+1. RISK SCORES — one emoji (🟢 Low / 🟡 Medium / 🔴 High) + one sentence per block. Score on concentration, replaceability, validation, how many other blocks depend on it, and whether I own it or rent it. A missing block = 🔴 High.
+
+2. CASCADE MAP (cascade propagation) — a change at one node ripples through every connected node. For each block, 2–3 things that break downstream if it shifts. One line each, only the significant cascades.
+
+3. WHAT-IF SCENARIOS — three, grounded in my actual canvas: (A) my biggest Key Partner disappears, (B) my primary Channel goes dark, (C) my Cost Structure doubles. For each: what breaks immediately, the second-order cascade, and one concrete way to reduce it. If I don't have a partner, channel or cost base yet, don't skip the scenario — run it on the one I'd most likely depend on and label it "(planned)". Never invent details I didn't give you.
+
+4. AI IMPACT — AI has already rewritten four blocks (Key Activities, Key Partners, Channels, Customer Relationships). Rate AI impact 🔵 High / 🟡 Medium / ⚪ Low on each of the nine, one line each, specific to my canvas (for Key Resources and Revenue Streams, pick Low or Medium). End with the single highest-leverage AI move I have not made yet.
+
+5. REVENUE PATH REALISM — the earliest viable revenue signal; an honest timeline to meaningful revenue; and the earliest off-ramp to prove someone will pay before the full model matures.
+
+BOTTOM LINE — name the leverage point: the one block to fix or validate first, and why the rest follows from it. Then, on its own line, one soft pointer with no hard sell: "Next step: the full prioritised treatment plan for all nine blocks is the paid kit, The Business Model Canvas — Risk Treatment Plan. It sits beside this tool: https://lively-stone-0534d420f.6.azurestaticapps.net/tools/"
+
+Plain English, systems lens, smart peer — not a textbook. Name real strengths briefly; be honest about weaknesses and don't soften. Never use "synergies", "ecosystem", or "value creation" without grounding it. Sign off in one line: "Industrial engineer. Building businesses in the age of AI. One system at a time."</pre>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>When you know what's broken — fix it in the right order</h2>
+  <p class="lead">The tool gives you the diagnosis and the one block to fix first. The kit is the full treatment plan for all nine.</p>
+  <div class="next">
+    <span class="tag">Strategy · Paid kit</span><span class="price"><s>$39</s>$19.50 with code LAUNCH50</span>
+    <div class="name">The Business Model Canvas — Risk Treatment Plan</div>
+    <div class="tagline">A real company worked through end to end, root-cause prompts for every block, a severity × control matrix that sets the fix order, an action menu, editable templates, and a one-page reference card. The free tool shows you what's broken; the kit tells you what to do about it, and in what order.</div>
+    <div class="row">
+      <a class="btn" href="https://lively-stone-0534d420f.6.azurestaticapps.net/tools/">Get the kit &amp; every tool →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-links">
+      <a href="https://www.youtube.com/@TheLeveragePointCo?sub_confirmation=1" target="_blank" rel="noopener">▶ Subscribe on YouTube</a>
+      <a href="https://www.linkedin.com/company/theleveragepointco" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      <a href="mailto:theleveragepointco@gmail.com">Work through your own business → theleveragepointco@gmail.com</a>
+    </div>
+    <div class="foot-note">The Leverage Point Co — Industrial engineer. Building businesses in the age of AI. One system at a time.</div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var btn = document.getElementById('copyBtn');
+    var pre = document.getElementById('prompt');
+    if(!btn||!pre) return;
+    btn.addEventListener('click', function(){
+      var text = pre.innerText;
+      navigator.clipboard.writeText(text).then(function(){
+        var o = btn.textContent; btn.textContent = 'Copied ✓';
+        setTimeout(function(){ btn.textContent = o; }, 2500);
+      }).catch(function(){
+        var r = document.createRange(); r.selectNode(pre);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        try{ document.execCommand('copy'); btn.textContent='Copied ✓'; setTimeout(function(){btn.textContent='Copy';},2500);}catch(e){}
+        s.removeAllRanges();
+      });
+    });
+  })();
+</script>
+<script>
+(function(){
+  var mark = document.getElementById('brandMark');
+  if (!mark) return;
+  var N = 13, base = '/assets/chunks/c', parts = [];
+  for (var i = 0; i < N; i++) {
+    var n = (i < 10 ? '0' : '') + i;
+    parts.push(fetch(base + n + '.txt').then(function(r){ return r.text(); }));
+  }
+  Promise.all(parts).then(function(vals){
+    var b64 = vals.join('');
+    var img = document.createElement('img');
+    img.className = 'mark mark-img'; img.alt = 'The Leverage Point Co';
+    img.width = mark.offsetWidth || 30; img.height = mark.offsetHeight || 30;
+    img.src = 'data:image/png;base64,' + b64;
+    mark.replaceWith(img);
+  }).catch(function(){ /* keep LP placeholder on any failure */ });
+})();
+</script>
+</body>
+</html>
