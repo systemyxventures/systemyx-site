@@ -1,0 +1,8 @@
+{
+  "name": "systemyx-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build-tools": "node scripts/build-tools.mjs"
+  }
+}

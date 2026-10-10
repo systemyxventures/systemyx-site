@@ -1,0 +1,47 @@
+<!--meta
+{
+ "eyebrow": "Strategy · Free Claude skill",
+ "title": "The Business Model Stress-Tester",
+ "lede": "Stop filling in the form. Draw the system. This runs the same analysis from the video on your own canvas — risk scores for all nine blocks, a cascade map, three what-if scenarios, an AI-impact read, and the single leverage point to fix first.",
+ "description": "Your free Business Model Stress-Tester — risk scores, a cascade map, what-if scenarios, an AI-impact read, and the one leverage point to fix first. Paste it into Claude and run it on your own canvas.",
+ "kit_intro_h2": "When you know what&#39;s broken — fix it in the right order",
+ "kit_intro_lead": "The tool gives you the diagnosis and the one block to fix first. The kit is the full treatment plan for all nine.",
+ "kit_detail": "A real company worked through end to end, root-cause prompts for every block, a severity × control matrix that sets the fix order, an action menu, editable templates, and a one-page reference card. The free tool shows you what's broken; the kit tells you what to do about it, and in what order."
+}
+-->
+<section class="wrap">
+  <h2>How to use it</h2>
+  <p class="lead">It's a prompt you run in Claude — no install, nothing to download. About two minutes.</p>
+  <ol class="steps">
+    <li><span class="n">1</span><span class="t"><b>Copy the prompt</b> below.</span></li>
+    <li><span class="n">2</span><span class="t"><b>Paste it into Claude</b> (claude.ai — the free tier is fine).</span></li>
+    <li><span class="n">3</span><span class="t"><b>Add your nine blocks</b> where marked — rough notes in any format work — and send. If you don't have a canvas yet, describe your business and Claude will map it first.</span></li>
+  </ol>
+  <div class="promptwrap">
+    <button class="copy-btn" id="copyBtn" type="button">Copy</button>
+    <pre class="prompt" id="prompt">You're a sharp, systems-oriented analyst stress-testing my business model. I want to know where it's fragile — for real decisions, not an MBA class.
+
+The premise: stop filling in the form; draw the system. A business model canvas isn't nine boxes to fill in — it's nine connected nodes, and the wiring between them is what we're testing. Three anchors: the constraint is the Value Proposition — the reason the machine exists; the feedback signal is Revenue Streams — the market's response to what's been built; the leverage point is the block that fails first and takes the most of the system down with it — usually whichever block is currently preventing value from reaching the customer. That's the one to name at the end.
+
+Keep every section concise and scannable — insight density, not length.
+
+Here is my canvas (rough notes, any format, are fine):
+<span class="ph">[PASTE YOUR NINE BLOCKS HERE — Customer Segments, Value Propositions, Channels, Customer Relationships, Revenue Streams, Key Resources, Key Activities, Key Partners, Cost Structure. Leave out any block you can't describe — the tool will flag it as a gap.]</span>
+
+Run this analysis on my canvas:
+
+1. RISK SCORES — one emoji (🟢 Low / 🟡 Medium / 🔴 High) + one sentence per block. Score on concentration, replaceability, validation, how many other blocks depend on it, and whether I own it or rent it. A missing block = 🔴 High.
+
+2. CASCADE MAP (cascade propagation) — a change at one node ripples through every connected node. For each block, 2–3 things that break downstream if it shifts. One line each, only the significant cascades.
+
+3. WHAT-IF SCENARIOS — three, grounded in my actual canvas: (A) my biggest Key Partner disappears, (B) my primary Channel goes dark, (C) my Cost Structure doubles. For each: what breaks immediately, the second-order cascade, and one concrete way to reduce it. If I don't have a partner, channel or cost base yet, don't skip the scenario — run it on the one I'd most likely depend on and label it "(planned)". Never invent details I didn't give you.
+
+4. AI IMPACT — AI has already rewritten four blocks (Key Activities, Key Partners, Channels, Customer Relationships). Rate AI impact 🔵 High / 🟡 Medium / ⚪ Low on each of the nine, one line each, specific to my canvas (for Key Resources and Revenue Streams, pick Low or Medium). End with the single highest-leverage AI move I have not made yet.
+
+5. REVENUE PATH REALISM — the earliest viable revenue signal; an honest timeline to meaningful revenue; and the earliest off-ramp to prove someone will pay before the full model matures.
+
+BOTTOM LINE — name the leverage point: the one block to fix or validate first, and why the rest follows from it. Then, on its own line, one soft pointer with no hard sell: "Next step: the full prioritised treatment plan for all nine blocks is the paid kit, The Business Model Canvas — Risk Treatment Plan. It sits beside this tool: https://systemyxventures.com/tools/"
+
+Plain English, systems lens, smart peer — not a textbook. Name real strengths briefly; be honest about weaknesses and don't soften. Never use "synergies", "ecosystem", or "value creation" without grounding it. Sign off in one line: "Industrial engineer. Building businesses in the age of AI. One system at a time."</pre>
+  </div>
+</section>

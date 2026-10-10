@@ -1,0 +1,27 @@
+
+  /* capture form, index cards, legal (build-tools) */
+  .capture{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 24px;max-width:520px;}
+  .fl{display:block;font-size:13px;font-weight:600;color:var(--ink-soft);margin-bottom:6px;}
+  .fl .opt{color:var(--faint);font-weight:400;}
+  .capture input[type=text],.capture input[type=email]{width:100%;background:var(--ground);border:1px solid var(--line);border-radius:9px;color:var(--ink);font:inherit;font-size:15px;padding:11px 13px;margin-bottom:16px;}
+  .capture input:focus{outline:2px solid var(--strategy);outline-offset:1px;}
+  .consent{display:flex;gap:10px;align-items:flex-start;margin:4px 0 18px;cursor:pointer;}
+  .consent input{margin-top:4px;accent-color:var(--strategy);flex-shrink:0;}
+  .consent span{font-size:12.5px;color:var(--muted);line-height:1.5;}
+  .consent a{color:var(--ink-soft);}
+  .capture .btn{color:var(--ink);border:0;cursor:pointer;font:inherit;font-weight:600;font-size:15px;padding:12px 20px;}
+  .capture .btn:disabled{opacity:.6;cursor:wait;}
+  .hp{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;}
+  .spam{font-size:12.5px;color:var(--muted);margin-top:14px;}
+  .err{display:none;color:#FF8A86;font-size:14px;margin-top:12px;}
+  .ok{background:var(--surface);border:1px solid var(--ops);border-radius:14px;padding:20px 24px;max-width:520px;}
+  .ok h3{font-size:18px;margin-bottom:6px;}
+  .ok p{color:var(--ink-soft);font-size:14.5px;}
+  .list{display:flex;flex-direction:column;gap:14px;}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 24px;}
+  .ladder{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted);letter-spacing:.08em;padding-left:24px;}
+  .legal p,.legal li{color:var(--ink-soft);font-size:15px;margin-bottom:12px;}
+  .legal ul{padding-left:20px;margin-bottom:16px;}
+  .legal h2{margin-top:22px;}
+  .legal a,.foot-links a{color:var(--ink-soft);}
+  @media (max-width:600px){ .capture,.ok,.card,.next{padding:18px 16px;} }
