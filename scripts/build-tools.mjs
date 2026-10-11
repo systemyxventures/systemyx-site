@@ -78,6 +78,8 @@ ${script}
 `;
 }
 
+const hasPartial = slug => fs.existsSync(path.join(ROOT, 'src/tools', `${slug}.html`));
+
 function readPartial(slug) {
   const f = path.join(ROOT, 'src/tools', `${slug}.html`);
   if (!fs.existsSync(f)) return null;
@@ -88,10 +90,12 @@ function readPartial(slug) {
 }
 
 function formBlock(tool) {
+  const guide = tool.type === 'guide';
+  const noun = guide ? 'guide' : 'tool';
   return `
 <section class="wrap" id="get">
-  <h2>Get the tool</h2>
-  <p class="lead">Free. Drop your email and I&#39;ll send you the link, so you have it when you need it. The tool opens right here as soon as you sign up.</p>
+  <h2>Get the ${noun}</h2>
+  <p class="lead">Free. Drop your email and I&#39;ll send you the link, so you have it when you need it. The ${noun} opens right here as soon as you sign up.</p>
   <form id="capture" class="capture" novalidate>
     <label class="fl" for="fname">First name <span class="opt">(optional)</span></label>
     <input type="text" id="fname" name="firstName" placeholder="Alex" autocomplete="given-name" maxlength="100">
@@ -99,14 +103,15 @@ function formBlock(tool) {
     <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" maxlength="320">
     <div class="hp" aria-hidden="true"><label for="website">Website</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></div>
     <label class="consent"><input type="checkbox" id="consent" required><span>${esc(CONSENT_TEXT)} <a href="/legal/">Privacy</a></span></label>
-    <button type="submit" id="btn" class="btn">Send me the tool →</button>
+    <button type="submit" id="btn" class="btn">Send me the ${noun} →</button>
     <p class="spam"><b>Heads up:</b> the email may land in Spam / Junk / Promotions. Mark it &quot;Not spam&quot; so the next one reaches your inbox.</p>
     <p class="err" id="err" role="alert"></p>
   </form>
-  <div class="ok" id="ok" hidden><h3>Check your inbox</h3><p>The link is on its way to <b id="sentTo"></b>. The tool is open below.</p></div>
-  <noscript><p class="lead">JavaScript is off, so the form cannot send. The tool is shown below.</p></noscript>
+  <div class="ok" id="ok" hidden><h3>Check your inbox</h3><p>The link is on its way to <b id="sentTo"></b>. The ${noun} is open below.</p></div>
+  <noscript><p class="lead">JavaScript is off, so the form cannot send. The ${noun} is shown below.</p></noscript>
 </section>
-<input type="hidden" id="toolSlug" value="${esc(tool.slug)}">`;
+<input type="hidden" id="toolSlug" value="${esc(tool.slug)}">
+<input type="hidden" id="btnLabel" value="Send me the ${noun} →">`;
 }
 
 const FORM_SCRIPT = `<script>
@@ -189,7 +194,7 @@ const FORM_SCRIPT = `<script>
         try { localStorage.setItem('lpc_tool_' + payload.tool, '1'); } catch(e) {}
         if (body) body.scrollIntoView({ behavior: 'smooth', block: 'start' });
       })
-      .catch(function(ex){ clearTimeout(t); showErr(ex.message); btn.disabled = false; btn.textContent = 'Send me the tool →'; });
+      .catch(function(ex){ clearTimeout(t); showErr(ex.message); btn.disabled = false; btn.textContent = document.getElementById('btnLabel').value; });
   });
 })();
 </script>
@@ -217,7 +222,8 @@ function toolPage(tool) {
   const pillar = tool.pillar || 'strategy';
   const eyebrow = meta.eyebrow || `${PILLAR_LABEL[pillar] || 'Strategy'} · ${TIER_LABEL[tool.tier] || 'Free tool'}`;
   const lede = meta.lede || esc(tool.tagline);
-  const toolBody = p ? p.body : `<section class="wrap"><h2>Your tool</h2><p class="lead">${esc(tool.tagline)}</p>
+  const verified = (fs.existsSync(path.join(ROOT, 'src/guides/claude-guide-v1.md')) && fs.readFileSync(path.join(ROOT, 'src/guides/claude-guide-v1.md'), 'utf8').match(/\*\*Last verified:\*\*\s*(\d{4}-\d{2}-\d{2})/)) || [];
+  const toolBody = p ? p.body.replace(/\{\{verified\}\}/g, verified[1] || '') : `<section class="wrap"><h2>Your tool</h2><p class="lead">${esc(tool.tagline)}</p>
   <a class="btn" href="${esc(tool.download_url)}">Open ${esc(tool.name)} →</a></section>`;
   const kitBlock = kit ? `
 <section class="wrap">
@@ -275,7 +281,7 @@ function resRow(r) {
   const base = r.raw;
   const action = r.kind === 'kit'
     ? `<a class="btn" href="${kitHref(base)}">Get the kit →</a>`
-    : r.type === 'guide'
+    : r.type === 'guide' && !hasPartial(r.slug)
       ? `<a class="btn" href="${esc(base.download_url)}">Read the guide →</a>`
       : `<a class="btn" href="/tools/${esc(r.slug)}.html?src=tools-index${r.video ? '&amp;v=' + encodeURIComponent(r.video) : ''}">Get it free →</a>`;
   const price = r.kind === 'kit' ? `<dt>Price</dt><dd><span class="price">${kitPrice(base)}</span></dd>` : '';
@@ -406,7 +412,7 @@ const write = (rel, html) => {
   fs.writeFileSync(f, html);
   console.log(`wrote ${rel} (${html.length} B)`);
 };
-// A guide links straight to its own URL (download_url); only tools get a capture page.
-for (const t of cat.tools) if (t.type !== 'guide') write(`tools/${t.slug}.html`, toolPage(t));
+// A guide with a src/tools partial is email-gated like a tool (capture page); a guide without one links straight to its own URL (download_url).
+for (const t of cat.tools) if (t.type !== 'guide' || hasPartial(t.slug)) write(`tools/${t.slug}.html`, toolPage(t));
 write('tools/index.html', indexPage());
 write('legal/index.html', legalPage());

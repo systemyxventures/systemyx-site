@@ -143,6 +143,7 @@
   <noscript><p class="lead">JavaScript is off, so the form cannot send. The tool is shown below.</p></noscript>
 </section>
 <input type="hidden" id="toolSlug" value="bmc-stress-tester">
+<input type="hidden" id="btnLabel" value="Send me the tool →">
 <div id="toolbody" hidden>
 <section class="wrap">
   <h2>How to use it</h2>
@@ -288,7 +289,7 @@ Plain English, systems lens, smart peer — not a textbook. Name real strengths 
         try { localStorage.setItem('lpc_tool_' + payload.tool, '1'); } catch(e) {}
         if (body) body.scrollIntoView({ behavior: 'smooth', block: 'start' });
       })
-      .catch(function(ex){ clearTimeout(t); showErr(ex.message); btn.disabled = false; btn.textContent = 'Send me the tool →'; });
+      .catch(function(ex){ clearTimeout(t); showErr(ex.message); btn.disabled = false; btn.textContent = document.getElementById('btnLabel').value; });
   });
 })();
 </script>
