@@ -108,38 +108,126 @@
   .legal a,.foot-links a{color:var(--ink-soft);}
   @media (max-width:600px){ .capture,.ok,.card,.next{padding:18px 16px;} }
   [hidden]{display:none !important;}
+/* /tools/ index (build-tools): Start here, controls, collapsible resource rows. Inlined on the index page only. */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+.start{padding:32px 0 8px;border-bottom:0;}
+.start h2,.vgroup h2{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:14px;}
+.start-cards{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));}
+.start-card{display:block;background:var(--surface);border:1px solid var(--strategy);border-radius:14px;padding:16px 18px;text-decoration:none;}
+.start-card:hover{background:var(--surface2);}
+.start-card .t-name{display:block;font-weight:700;font-size:16px;letter-spacing:-.01em;margin:8px 0 4px;}
+.start-card .t-hook{display:block;color:var(--ink-soft);font-size:14px;line-height:1.5;}
+.controls{padding:20px 0 4px;border-bottom:0;display:flex;flex-direction:column;gap:12px;}
+.ctl-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;}
+.controls input[type=search],.controls select{background:var(--surface);border:1px solid var(--line);border-radius:9px;color:var(--ink);font:inherit;font-size:15px;padding:11px 13px;min-height:44px;}
+.controls input[type=search]{flex:1 1 220px;min-width:0;}
+.controls select{flex:0 1 200px;}
+.controls :focus-visible,.res summary:focus-visible,.start-card:focus-visible,.chip:focus-visible,.tgl:focus-visible,.count button:focus-visible{outline:2px solid var(--ai);outline-offset:2px;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chip,.tgl{background:var(--surface);color:var(--ink-soft);border:1px solid var(--line);border-radius:999px;font:inherit;font-size:14px;padding:9px 14px;min-height:44px;cursor:pointer;}
+.chip[aria-pressed=true]{background:var(--strategy);border-color:var(--strategy);color:var(--ink);font-weight:600;}
+.tgl{border-radius:9px;}
+.tgl:disabled{opacity:.5;cursor:default;}
+.count{font-size:13.5px;color:var(--ink-soft);min-height:22px;}
+.count button{background:none;border:0;color:var(--ink);text-decoration:underline;font:inherit;cursor:pointer;padding:0 0 0 6px;}
+.vgroup{padding:28px 0 8px;border-bottom:0;}
+.vgroup h2.vh{font-family:"IBM Plex Sans",sans-serif;text-transform:none;letter-spacing:-.01em;font-size:20px;color:var(--ink);font-weight:700;margin-bottom:14px;}
+.vgroup .vkicker{display:block;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:4px;}
+.res{background:var(--surface);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;scroll-margin-top:16px;}
+.res[open]{border-color:var(--ink-soft);}
+.res summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:center;padding:14px 18px;min-height:44px;border-radius:14px;}
+.res summary::-webkit-details-marker{display:none;}
+.res summary::after{content:"";grid-column:2;grid-row:1 / span 2;width:9px;height:9px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);margin:0 4px;}
+.res[open] summary::after{transform:rotate(-135deg);}
+.res .t-head{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;margin:0;font-size:16px;font-weight:700;letter-spacing:-.01em;line-height:1.35;}
+.res .t-hook{grid-column:1;color:var(--ink-soft);font-size:14px;line-height:1.5;}
+.badge{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border:1px solid currentColor;border-radius:999px;padding:3px 9px;white-space:nowrap;}
+.badge.b-tool{color:var(--ai);} .badge.b-kit{color:#FF6B66;} .badge.b-guide{color:var(--ops);}
+.res .body{padding:2px 18px 18px;}
+.res dl{display:grid;gap:12px;margin-bottom:16px;}
+.res dt{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:2px;}
+.res dd{color:var(--ink-soft);font-size:14.5px;line-height:1.55;max-width:60ch;}
+.res .price{margin-left:0;font-size:14px;}
+.res .permalink{font-size:13px;color:var(--muted);}
+.res .ladder{padding-left:0;margin:0 0 14px;}
+.res .ladder a{color:var(--ink-soft);}
+@media (max-width:600px){ .res summary{padding:14px;} .res .body{padding:2px 14px 16px;} }
+@media (prefers-reduced-motion:no-preference){ .res summary::after{transition:transform .15s;} }
+.res .btn{color:var(--ink);}
+.res .price s{color:var(--ink-soft);}
 </style>
 </head>
 <body>
 
-<div class="topbar">
+<header class="topbar">
   <div class="wrap">
     <div class="mark"><span>LP</span></div>
     <div class="brand"><a href="/tools/" style="text-decoration:none;">The Leverage Point Co</a> <em>· free tools</em></div>
   </div>
-</div>
-
+</header>
+<main>
 <div class="hero wrap">
-  <div class="eyebrow">Free tools · Paid kits</div>
+  <div class="eyebrow">Free tools · Kits · Guides</div>
   <h1>Every tool &amp; kit</h1>
   <p class="golden-thread">The free tool shows you what&#39;s broken. The kit tells you what to do about it, and which block to fix first. One leverage point at a time.</p>
 </div>
-<section class="wrap list">
-
-  <div class="card">
-    <span class="tag">Strategy · Free Claude skill</span>
-    <div class="name">Business Model Stress-Tester (Claude skill)</div>
-    <div class="tagline">Paste your nine blocks. Get risk scores, a cascade map, three what-if scenarios and your leverage point: the block that fails first.</div>
-    <a class="btn" href="/tools/bmc-stress-tester.html">Get it free →</a>
-  </div>
-  <div class="ladder">↓ upgrades to</div>
-  <div class="next">
-    <span class="tag">Strategy · Paid kit</span><span class="price"><s>$39</s>$19.50 with code LAUNCH50</span>
-    <div class="name">The Business Model Canvas — Risk Treatment Plan</div>
-    <div class="tagline">The worked example, the prioritisation matrix, and the exact fix order for your riskiest blocks.</div>
-    <a class="btn" href="https://lpc-api.lpc-api.workers.dev/r?type=paid&slug=bmc-risk-treatment-plan&to=https%3A%2F%2Ftheleveragepointco.lemonsqueezy.com%2Fcheckout%2Fbuy%2Fcf52f554-d7b4-460b-979c-3eb2888cedfc%3Fcheckout%255Bdiscount_code%255D%3DLAUNCH50">Get the kit →</a>
+<section class="wrap start" id="start" aria-labelledby="start-h">
+  <h2 id="start-h">Start here</h2>
+  <div class="start-cards">
+    <a class="start-card" href="#bmc-stress-tester"><span class="badge b-tool">Free tool</span><span class="t-name">Business Model Stress-Tester</span><span class="t-hook">Find the block of your business model that fails first.</span></a>
   </div>
 </section>
+<section class="wrap controls" id="controls" aria-label="Find a resource" hidden>
+  <div class="ctl-row">
+    <label class="sr-only" for="q">Search tools, kits and guides</label>
+    <input type="search" id="q" placeholder="Search tools, kits and guides" autocomplete="off">
+    <label class="sr-only" for="topic">Topic</label>
+    <select id="topic"><option value="all">All topics</option><option value="business-model">Business model</option><option value="risk">Risk</option><option value="strategy">Strategy</option></select>
+  </div>
+  <div class="ctl-row">
+    <div class="chips" role="group" aria-label="Type"><button type="button" class="chip" data-type="all" aria-pressed="true">All</button><button type="button" class="chip" data-type="tool" aria-pressed="false">Free tools</button><button type="button" class="chip" data-type="kit" aria-pressed="false">Kits</button></div>
+    <button type="button" class="tgl" id="tgl">Expand all</button>
+  </div>
+  <p class="count" id="count" role="status" aria-live="polite"></p>
+</section>
+<noscript><p class="wrap lead" style="padding-top:16px">JavaScript is off, so search and filters are not available. Tap any row to open it.</p></noscript>
+
+<section class="wrap vgroup" aria-labelledby="vh-business-model-canvas">
+  <span class="vkicker">From the video · 15 October 2026</span>
+  <h2 class="vh" id="vh-business-model-canvas">AI Rewrote 4 Blocks of Your Business Model Canvas</h2>
+  <details class="res" id="bmc-stress-tester" data-type="tool" data-topics="business-model,risk,strategy" data-search="business model stress-tester find the block of your business model that fails first. paste your nine blocks. get risk scores, a cascade map, three what-if scenarios and your leverage point: the block that fails first. anyone running or planning a business who wants to know where their model is fragile, before it costs money. a prompt you paste into claude (free tier is fine): risk scores for all nine blocks, a cascade map, three what-if scenarios, an ai-impact read and the single leverage point to fix first. business-model risk strategy free tool ai rewrote 4 blocks of your business model canvas">
+    <summary>
+      <h3 class="t-head">Business Model Stress-Tester <span class="badge b-tool">Free tool</span></h3>
+      <span class="t-hook">Find the block of your business model that fails first.</span>
+    </summary>
+    <div class="body">
+      <dl>
+        <dt>What it does</dt><dd>Paste your nine blocks. Get risk scores, a cascade map, three what-if scenarios and your leverage point: the block that fails first.</dd>
+        <dt>Who it's for</dt><dd>Anyone running or planning a business who wants to know where their model is fragile, before it costs money.</dd>
+        <dt>What you get</dt><dd>A prompt you paste into Claude (free tier is fine): risk scores for all nine blocks, a cascade map, three what-if scenarios, an AI-impact read and the single leverage point to fix first.</dd>
+        
+      </dl>
+      <p class="ladder">↓ Upgrades to <a href="#bmc-risk-treatment-plan">The Business Model Canvas — Risk Treatment Plan</a></p>
+      <div class="row"><a class="btn" href="/tools/bmc-stress-tester.html">Get it free →</a><a class="permalink" href="#bmc-stress-tester">Link to this row</a></div>
+    </div>
+  </details>
+  <details class="res" id="bmc-risk-treatment-plan" data-type="kit" data-topics="business-model,risk,strategy" data-search="the business model canvas — risk treatment plan the fix order for your riskiest blocks. the worked example, the prioritisation matrix, and the exact fix order for your riskiest blocks. anyone who has run the free stress-tester and wants the full treatment plan for all nine blocks. a real company worked end to end, root-cause prompts for every block, a severity x control matrix that sets the fix order, an action menu, editable templates and a one-page reference card. business-model risk strategy kit ai rewrote 4 blocks of your business model canvas">
+    <summary>
+      <h3 class="t-head">The Business Model Canvas — Risk Treatment Plan <span class="badge b-kit">Kit</span></h3>
+      <span class="t-hook">The fix order for your riskiest blocks.</span>
+    </summary>
+    <div class="body">
+      <dl>
+        <dt>What it does</dt><dd>The worked example, the prioritisation matrix, and the exact fix order for your riskiest blocks.</dd>
+        <dt>Who it's for</dt><dd>Anyone who has run the free Stress-Tester and wants the full treatment plan for all nine blocks.</dd>
+        <dt>What you get</dt><dd>A real company worked end to end, root-cause prompts for every block, a severity x control matrix that sets the fix order, an action menu, editable templates and a one-page reference card.</dd>
+        <dt>Price</dt><dd><span class="price"><s>$39</s>$19.50 with code LAUNCH50</span></dd>
+      </dl>
+      <p class="ladder">↑ Starts with the free <a href="#bmc-stress-tester">Business Model Stress-Tester</a></p>
+      <div class="row"><a class="btn" href="https://lpc-api.lpc-api.workers.dev/r?type=paid&slug=bmc-risk-treatment-plan&to=https%3A%2F%2Ftheleveragepointco.lemonsqueezy.com%2Fcheckout%2Fbuy%2Fcf52f554-d7b4-460b-979c-3eb2888cedfc%3Fcheckout%255Bdiscount_code%255D%3DLAUNCH50">Get the kit →</a><a class="permalink" href="#bmc-risk-treatment-plan">Link to this row</a></div>
+    </div>
+  </details>
+</section></main>
 <footer>
   <div class="wrap">
     <div class="foot-links">
@@ -152,6 +240,85 @@
     <div class="foot-note">The Leverage Point Co — a Systemyx Ventures brand. Industrial engineer. Building businesses in the age of AI. One system at a time.</div>
   </div>
 </footer>
+<script>
+(function(){
+  var $ = function(s, r){ return (r || document).querySelector(s); };
+  var all = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var rows = all('.res'), groups = all('.vgroup'), start = $('#start');
+  var controls = $('#controls'), q = $('#q'), topic = $('#topic'), chips = all('.chip'), count = $('#count'), tgl = $('#tgl');
+  if (!controls || !rows.length) return;
+  controls.hidden = false;
+  var type = 'all';
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var plural = function(n, w){ return n + ' ' + w + (n === 1 ? '' : 's'); };
 
+  function filtering(){ return !!(q.value.trim() || type !== 'all' || topic.value !== 'all'); }
+  function visibleRows(){ return rows.filter(function(r){ return !r.hidden; }); }
+  function syncToggle(){
+    var v = visibleRows();
+    var allOpen = v.length > 0 && v.every(function(r){ return r.open; });
+    tgl.textContent = allOpen ? 'Collapse all' : 'Expand all';
+    tgl.disabled = v.length === 0;
+  }
+  function apply(){
+    var words = q.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    var t = topic.value;
+    rows.forEach(function(r){
+      var hay = r.getAttribute('data-search');
+      var ok = (type === 'all' || r.getAttribute('data-type') === type) &&
+        (t === 'all' || (',' + r.getAttribute('data-topics') + ',').indexOf(',' + t + ',') > -1) &&
+        words.every(function(w){ return hay.indexOf(w) > -1; });
+      r.hidden = !ok;
+    });
+    groups.forEach(function(g){ g.hidden = !all('.res', g).some(function(r){ return !r.hidden; }); });
+    if (start) start.hidden = filtering();
+    var v = visibleRows();
+    count.textContent = '';
+    if (filtering()) {
+      count.appendChild(document.createTextNode(v.length ? 'Showing ' + v.length + ' of ' + plural(rows.length, 'resource') + '.' : 'No resources match.'));
+      var b = document.createElement('button'); b.type = 'button'; b.textContent = 'Clear filters'; b.addEventListener('click', clear);
+      count.appendChild(b);
+    } else {
+      count.textContent = plural(rows.length, 'resource') + '.';
+    }
+    if (filtering() && v.length === 1) v[0].open = true;
+    syncToggle();
+  }
+  function clear(){
+    q.value = ''; topic.value = 'all'; setType('all', true); apply();
+  }
+  function setType(t, silent){
+    type = t;
+    chips.forEach(function(c){ c.setAttribute('aria-pressed', String(c.getAttribute('data-type') === t)); });
+    if (!silent) apply();
+  }
+  chips.forEach(function(c){ c.addEventListener('click', function(){ setType(c.getAttribute('data-type')); }); });
+  q.addEventListener('input', apply);
+  topic.addEventListener('change', apply);
+  tgl.addEventListener('click', function(){
+    var v = visibleRows(), allOpen = v.every(function(r){ return r.open; });
+    v.forEach(function(r){ r.open = !allOpen; });
+    syncToggle();
+  });
+  rows.forEach(function(r){ r.addEventListener('toggle', syncToggle); });
+
+  // Deep link: /tools/#<slug> opens that row and scrolls to it, on load and on hashchange.
+  function openFromHash(){
+    var id = ''; try { id = decodeURIComponent(location.hash.slice(1)); } catch (e) { return; }
+    var el = id ? document.getElementById(id) : null;
+    if (!el || !el.classList || !el.classList.contains('res')) return;
+    if (el.hidden) clear();
+    el.open = true;
+    var s = $('summary', el);
+    try { el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); } catch (e) { el.scrollIntoView(); }
+    // Focus after the browser's own fragment handling has finished, or it resets focus to the body.
+    if (s && s.focus) setTimeout(function(){ try { s.focus({ preventScroll: true }); } catch (e) { s.focus(); } }, 60);
+  }
+  window.addEventListener('hashchange', openFromHash);
+  all('a.start-card').forEach(function(a){ a.addEventListener('click', function(){ setTimeout(openFromHash, 0); }); });
+  apply();
+  openFromHash();
+})();
+</script>
 </body>
 </html>
