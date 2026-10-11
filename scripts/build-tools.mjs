@@ -9,6 +9,8 @@ import { fileURLToPath } from 'url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const API = 'https://lpc-api.lpc-api.workers.dev';
 const SITE = 'https://systemyxventures.com';
+// Backup capture path (Apps Script web app of Sheet "lpc-capture-backup"); src/backup-url.txt, or env BACKUP_URL. Empty = no backup.
+const BACKUP_URL = (process.env.BACKUP_URL || (fs.existsSync(path.join(ROOT, 'src/backup-url.txt')) ? fs.readFileSync(path.join(ROOT, 'src/backup-url.txt'), 'utf8') : '')).trim();
 const CONSENT_TEXT = 'Email me this tool and add me to The Leverage Point Co list. I may occasionally hear about new tools, and can unsubscribe anytime from any email. (POPIA)';
 const PILLAR_LABEL = { strategy: 'Strategy', ai: 'AI', ops: 'Operations' };
 const TIER_LABEL = { skill: 'Free Claude skill', frame: 'Free template', kit: 'Free kit' };
@@ -122,10 +124,21 @@ const FORM_SCRIPT = `<script>
   function showErr(m){ err.textContent = m; err.style.display = 'block'; }
 
   // ===== M1B-BACKUP-HOOK =====
-  // Called when lpc-api times out (4 s) or is unreachable. M1b replaces this body with the backup capture path.
-  // Until then: tell the person and do not pretend the sign-up worked.
+  // Called when lpc-api is unreachable, times out (4 s), answers non-JSON, or answers 5xx. Posts the same fields to the
+  // Apps Script web app (Sheet "lpc-capture-backup"); the Worker replays them into D1 and sends the tool email.
+  // text/plain keeps it a "simple" request (Apps Script web apps do not answer CORS preflight).
+  var BACKUP = ${JSON.stringify(BACKUP_URL)};
+  var CONSENT = ${JSON.stringify(CONSENT_TEXT)};
   function backupCapture(payload){
-    return Promise.reject(new Error('We could not reach the sign-up service. Please try again in a minute.'));
+    var fail = function(){ return new Error('We could not reach the sign-up service. Please try again in a minute.'); };
+    if (!BACKUP) return Promise.reject(fail());
+    var ctl = new AbortController(); var bt = setTimeout(function(){ ctl.abort(); }, 10000);
+    var body = JSON.stringify({ email: payload.email, firstName: payload.firstName, tool: payload.tool, consent: true,
+      consent_text: CONSENT, website: payload.website, video: payload.video, source: payload.source, utm: payload.utm });
+    return fetch(BACKUP, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: body, signal: ctl.signal, redirect: 'follow' })
+      .then(function(r){ return r.json(); })
+      .then(function(d){ clearTimeout(bt); if (!d || !d.ok) throw fail(); })
+      .catch(function(){ clearTimeout(bt); throw fail(); });
   }
   // ===== /M1B-BACKUP-HOOK =====
 
@@ -147,7 +160,13 @@ const FORM_SCRIPT = `<script>
     btn.disabled = true; btn.textContent = 'Sending…';
     var ctl = new AbortController(); var t = setTimeout(function(){ ctl.abort(); }, TIMEOUT_MS);
     fetch(API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload), signal: ctl.signal })
-      .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(d){ if (!r.ok || !d.ok) { var x = new Error(d.error || 'Something went wrong. Please try again.'); x.http = true; throw x; } }); })
+      .then(function(r){ return r.text().then(function(txt){
+        var d = null; try { d = JSON.parse(txt); } catch(e) {}
+        if (r.ok && d && d.ok) return;
+        // A clear answer from the Worker (validation, origin, rate limit, paused) is shown as is; no backup.
+        if (d && (d.paused || (d.ok === false && r.status < 500))) { var x = new Error(d.error || 'Something went wrong. Please try again.'); x.http = true; throw x; }
+        throw new Error('worker unavailable'); // 5xx or non-JSON: the Worker is down
+      }); })
       .catch(function(ex){ if (ex.http) throw ex; return backupCapture(payload); })
       .then(function(){
         clearTimeout(t);
