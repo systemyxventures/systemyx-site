@@ -277,7 +277,7 @@ function resRow(r) {
     ? `<a class="btn" href="${kitHref(base)}">Get the kit →</a>`
     : r.type === 'guide'
       ? `<a class="btn" href="${esc(base.download_url)}">Read the guide →</a>`
-      : `<a class="btn" href="/tools/${esc(r.slug)}.html">Get it free →</a>`;
+      : `<a class="btn" href="/tools/${esc(r.slug)}.html?src=tools-index${r.video ? '&amp;v=' + encodeURIComponent(r.video) : ''}">Get it free →</a>`;
   const price = r.kind === 'kit' ? `<dt>Price</dt><dd><span class="price">${kitPrice(base)}</span></dd>` : '';
   const upgrade = r.kind === 'kit' && base.upgrades_from ? cat.tools.find(t => t.slug === base.upgrades_from) : null;
   const kit = r.kind === 'tool' ? kitFor(r.slug) : null;
