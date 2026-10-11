@@ -114,8 +114,11 @@ const FORM_SCRIPT = `<script>
   var btn = document.getElementById('btn'), err = document.getElementById('err');
   var qs = new URLSearchParams(location.search);
   function reveal(){ if (body) body.hidden = false; }
-  // Opened from the delivery email (?via=email) or a returning visitor: show the tool straight away.
-  try { if (qs.get('via') === 'email' || localStorage.getItem('lpc_tool_' + document.getElementById('toolSlug').value)) reveal(); } catch(e) { if (qs.get('via') === 'email') reveal(); }
+  // Opened from the delivery email (?via=email) or by a returning visitor: they have the tool, so drop the form.
+  function already(){ reveal(); var g = document.getElementById('get'); if (g) g.hidden = true; }
+  var returning = false;
+  try { returning = !!localStorage.getItem('lpc_tool_' + document.getElementById('toolSlug').value); } catch(e) {}
+  if (qs.get('via') === 'email' || returning) already();
   function showErr(m){ err.textContent = m; err.style.display = 'block'; }
 
   // ===== M1B-BACKUP-HOOK =====
