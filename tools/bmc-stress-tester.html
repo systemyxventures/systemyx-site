@@ -228,7 +228,7 @@ Plain English, systems lens, smart peer — not a textbook. Name real strengths 
   // Called when lpc-api is unreachable, times out (4 s), answers non-JSON, or answers 5xx. Posts the same fields to the
   // Apps Script web app (Sheet "lpc-capture-backup"); the Worker replays them into D1 and sends the tool email.
   // text/plain keeps it a "simple" request (Apps Script web apps do not answer CORS preflight).
-  var BACKUP = "";
+  var BACKUP = "https://script.google.com/macros/s/AKfycbxiO6FkPgJYuoSb7wHn31aCODuf798-3-w948bJyemmsxG6HynurxIbo0r5Cr66ts11Jw/exec";
   var CONSENT = "Email me this tool and add me to The Leverage Point Co list. I may occasionally hear about new tools, and can unsubscribe anytime from any email. (POPIA)";
   function backupCapture(payload){
     var fail = function(){ return new Error('We could not reach the sign-up service. Please try again in a minute.'); };
