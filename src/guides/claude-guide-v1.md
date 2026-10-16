@@ -2,7 +2,7 @@
 
 *A plain-English guide to better results from the same usage. The Leverage Point Co · Guide v1*
 
-**Last verified:** 2026-10-11
+**Last verified:** 2026-10-16
 **Refresh when:** new model, limit change, feature rename
 **Scope:** the Claude apps (web, desktop, mobile) and Claude Code, on an individual Pro plan. Numbers in square brackets, like [3], point to the source list in Appendix A. A line marked **Practice** is my working method, not Anthropic guidance. The last section lists four things worth checking on your own account.
 
@@ -28,7 +28,7 @@
 
 ## 1. The problem in one picture
 
-Your plan is a capacity constraint with two buckets. Paid plans have a session limit that resets every five hours and a weekly limit that resets once a week. [1] On Pro the weekly limit applies across all models and resets seven days after your session starts. [2]
+Your plan is a capacity constraint with two buckets. Paid plans have a session limit that resets every five hours and a weekly limit that resets once a week. [1] Settings > Usage shows when your session and weekly limits reset. [3]
 
 What you spend per task depends on message length, attachment size, conversation length, tool use (such as research and web search), model choice and artifact creation. [3] Anthropic also lists the features you use and the effort level you select. [1] The same pool is shared across the Claude apps and Claude Code. [1][20]
 
@@ -241,8 +241,8 @@ Connectors let Claude read from, and act in, your outside tools. Custom connecto
 ### What Anthropic says
 
 - Two limits: a five-hour session limit and a weekly limit. [1]
-- Your Usage settings page shows progress bars for your limits, the time remaining in the current session, and when your weekly limit resets. [3]
-- On Pro, the weekly limit resets seven days after your session starts. [2]
+- Settings > Usage shows when your session limit and your weekly limit reset. [3]
+- This guide does not confirm when a window starts or how the weekly reset is counted, so read your reset time on that page instead of calculating it.
 - When you reach a limit you can wait, upgrade to Max, or turn on usage credits. [1][2][20]
 - Usage credits are pay-as-you-go at standard API rates, billed separately from your subscription. You can set a monthly spend cap, and your regular limits keep resetting on schedule. [21]
 - Anthropic's advice on credits: use your plan's included usage first, and plan intensive sessions around your five-hour windows. [21]
