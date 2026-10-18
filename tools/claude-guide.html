@@ -37,7 +37,7 @@
     background-size:36px 36px; min-height:100vh;
   }
   a{color:inherit;}
-  .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+  .wrap{max-width:760px;margin:0 auto;padding-left:24px;padding-right:24px;}
 
   .topbar{border-bottom:1px solid var(--line-soft);padding:20px 0;}
   .topbar .wrap{display:flex;align-items:center;gap:12px;}
@@ -47,12 +47,12 @@
   .brand{font-weight:600;font-size:15px;letter-spacing:-.01em;}
   .brand em{color:var(--muted);font-weight:400;font-style:normal;}
 
-  .hero{padding:56px 0 36px;border-bottom:1px solid var(--line-soft);}
+  .hero{padding-top:56px;padding-bottom:36px;border-bottom:1px solid var(--line-soft);}
   .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--strategy);font-weight:500;margin-bottom:16px;}
   h1{font-weight:700;font-size:clamp(26px,4.5vw,38px);line-height:1.16;letter-spacing:-.02em;margin-bottom:16px;max-width:22ch;}
   .golden-thread{color:var(--ink-soft);font-size:16px;line-height:1.65;max-width:56ch;border-left:3px solid var(--strategy);padding-left:16px;}
 
-  section{padding:40px 0;border-bottom:1px solid var(--line-soft);}
+  section{padding-top:48px;padding-bottom:48px;border-bottom:1px solid var(--line-soft);}
   h2{font-weight:700;font-size:20px;letter-spacing:-.01em;margin-bottom:8px;}
   .lead{color:var(--ink-soft);font-size:15px;margin-bottom:20px;max-width:60ch;}
 
@@ -78,6 +78,7 @@
   .btn{display:inline-flex;align-items:center;gap:8px;background:var(--strategy);color:#141115;font-weight:600;font-size:14px;border-radius:8px;padding:10px 16px;text-decoration:none;transition:opacity .15s,transform .1s;}
   .btn:hover{opacity:.88;} .btn:active{transform:translateY(1px);}
   .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);}
+  .btn.alt{background:transparent;color:var(--ink);border:1px solid var(--strategy);}
   .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
 
   footer{border-top:1px solid var(--line-soft);margin-top:8px;padding:32px 0 40px;}
@@ -86,10 +87,10 @@
   .foot-links a:hover{color:var(--ink);}
   .foot-note{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--faint);letter-spacing:.04em;line-height:1.7;}
 
-  @media (max-width:600px){ .wrap{padding:0 18px;} .hero{padding:40px 0 28px;} }
+  @media (max-width:600px){ .wrap{padding-left:18px;padding-right:18px;} .hero{padding-top:40px;padding-bottom:28px;} section{padding-top:40px;padding-bottom:40px;} }
 
   /* capture form, index cards, legal (build-tools) */
-  .capture{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 24px;max-width:520px;}
+  .capture{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 24px;}
   .fl{display:block;font-size:13px;font-weight:600;color:var(--ink-soft);margin-bottom:6px;}
   .fl .opt{color:var(--faint);font-weight:400;}
   .capture input[type=text],.capture input[type=email]{width:100%;background:var(--ground);border:1px solid var(--line);border-radius:9px;color:var(--ink);font:inherit;font-size:15px;padding:11px 13px;margin-bottom:16px;}
@@ -103,7 +104,7 @@
   .hp{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;}
   .spam{font-size:12.5px;color:var(--muted);margin-top:14px;}
   .err{display:none;color:#FF8A86;font-size:14px;margin-top:12px;}
-  .ok{background:var(--surface);border:1px solid var(--ops);border-radius:14px;padding:20px 24px;max-width:520px;}
+  .ok{background:var(--surface);border:1px solid var(--ops);border-radius:14px;padding:20px 24px;}
   .ok h3{font-size:18px;margin-bottom:6px;}
   .ok p{color:var(--ink-soft);font-size:14.5px;}
   .list{display:flex;flex-direction:column;gap:14px;}
@@ -134,7 +135,7 @@
 
 <section class="wrap" id="get">
   <h2>Get the guide</h2>
-  <p class="lead">Free. Drop your email and I&#39;ll send you the link, so you have it when you need it. The guide opens right here as soon as you sign up.</p>
+  <p class="lead">Free. Drop your email and I&#39;ll send you the link to keep. The guide also opens right here as soon as you sign up.</p>
   <form id="capture" class="capture" novalidate>
     <label class="fl" for="fname">First name <span class="opt">(optional)</span></label>
     <input type="text" id="fname" name="firstName" placeholder="Alex" autocomplete="given-name" maxlength="100">

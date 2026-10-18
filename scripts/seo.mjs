@@ -17,7 +17,7 @@ export const clock = s => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).pa
 
 // ---- click-to-play embed: a poster button; the iframe is created only on click (no autoplay on load, no YouTube request before).
 export const EMBED_CSS = `
-.vid{padding:32px 0 8px;border-bottom:none;}
+.vid{padding-top:32px;padding-bottom:8px;border-bottom:none;}
 .vplayer{position:relative;aspect-ratio:16/9;background:#000;border:1px solid var(--line);border-radius:12px;overflow:hidden;}
 .vplayer iframe,.vplay{position:absolute;inset:0;width:100%;height:100%;border:0;}
 .vplay{display:block;padding:0;margin:0;background:#000;cursor:pointer;}

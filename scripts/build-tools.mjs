@@ -162,7 +162,7 @@ function formBlock(tool) {
   return `
 <section class="wrap" id="get">
   <h2>Get the ${noun}</h2>
-  <p class="lead">Free. Drop your email and I&#39;ll send you the link, so you have it when you need it. The ${noun} opens right here as soon as you sign up.</p>
+  <p class="lead">Free. Drop your email and I&#39;ll send you the link to keep. The ${noun} also opens right here as soon as you sign up.</p>
   <form id="capture" class="capture" novalidate>
     <label class="fl" for="fname">First name <span class="opt">(optional)</span></label>
     <input type="text" id="fname" name="firstName" placeholder="Alex" autocomplete="given-name" maxlength="100">
@@ -301,8 +301,7 @@ function toolPage(tool) {
     <div class="name">${esc(kit.name)}</div>
     <div class="tagline">${meta.kit_detail || esc(kit.tagline)}</div>
     <div class="row">
-      <a class="btn" href="${kitHref(kit)}">Get the kit →</a>
-      <a class="btn ghost" href="/tools/">Every tool &amp; kit</a>
+      <a class="btn alt" href="${kitHref(kit)}">Get the kit →</a>
     </div>
   </div>
 </section>` : '';

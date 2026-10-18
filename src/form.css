@@ -1,6 +1,6 @@
 
   /* capture form, index cards, legal (build-tools) */
-  .capture{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 24px;max-width:520px;}
+  .capture{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 24px;}
   .fl{display:block;font-size:13px;font-weight:600;color:var(--ink-soft);margin-bottom:6px;}
   .fl .opt{color:var(--faint);font-weight:400;}
   .capture input[type=text],.capture input[type=email]{width:100%;background:var(--ground);border:1px solid var(--line);border-radius:9px;color:var(--ink);font:inherit;font-size:15px;padding:11px 13px;margin-bottom:16px;}
@@ -14,7 +14,7 @@
   .hp{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;}
   .spam{font-size:12.5px;color:var(--muted);margin-top:14px;}
   .err{display:none;color:#FF8A86;font-size:14px;margin-top:12px;}
-  .ok{background:var(--surface);border:1px solid var(--ops);border-radius:14px;padding:20px 24px;max-width:520px;}
+  .ok{background:var(--surface);border:1px solid var(--ops);border-radius:14px;padding:20px 24px;}
   .ok h3{font-size:18px;margin-bottom:6px;}
   .ok p{color:var(--ink-soft);font-size:14.5px;}
   .list{display:flex;flex-direction:column;gap:14px;}
