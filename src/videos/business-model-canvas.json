@@ -1,0 +1,107 @@
+{
+ "number": 1,
+ "duration": "PT18M50S",
+ "lead": "The Business Model Canvas is a one-page map of how a business works, split into nine blocks. AI changed what four of them cost to run: Key Activities, Key Partners, Customer Relationships and Channels.",
+ "summary": "This video reads the Business Model Canvas through an industrial-engineering systems lens, with examples from Base44, Duolingo, Klarna and Shopify of how AI has changed what four of its blocks cost to run. It then shows how to stress test your own business model by finding the one block that fails first, your leverage point, and what to try on it in fifteen minutes.",
+ "chapters": [
+  {
+   "t": "0:00",
+   "title": "The one part holding up your business"
+  },
+  {
+   "t": "0:54",
+   "title": "What the Business Model Canvas is"
+  },
+  {
+   "t": "1:47",
+   "title": "Read it as a system, not a form"
+  },
+  {
+   "t": "2:18",
+   "title": "The Pareto principle"
+  },
+  {
+   "t": "2:36",
+   "title": "Why AI changes four blocks"
+  },
+  {
+   "t": "2:53",
+   "title": "Law 1: Nothing changes in isolation (Netflix)"
+  },
+  {
+   "t": "3:42",
+   "title": "Law 2: The heaviest block can be the moat (Takealot)"
+  },
+  {
+   "t": "4:34",
+   "title": "Form vs system"
+  },
+  {
+   "t": "5:09",
+   "title": "AI rewrote four blocks"
+  },
+  {
+   "t": "5:42",
+   "title": "Key Activities"
+  },
+  {
+   "t": "7:38",
+   "title": "Key Partners"
+  },
+  {
+   "t": "9:29",
+   "title": "Customer Relationships"
+  },
+  {
+   "t": "11:22",
+   "title": "Channels"
+  },
+  {
+   "t": "13:19",
+   "title": "All four together, and Cost Structure"
+  },
+  {
+   "t": "14:38",
+   "title": "Build: from reading to running it"
+  },
+  {
+   "t": "15:01",
+   "title": "The Business Model Stress-Tester demo"
+  },
+  {
+   "t": "17:03",
+   "title": "Your one move today"
+  },
+  {
+   "t": "17:26",
+   "title": "The Risk Treatment Plan"
+  },
+  {
+   "t": "17:37",
+   "title": "The takeaway"
+  },
+  {
+   "t": "17:52",
+   "title": "Your turn"
+  },
+  {
+   "t": "18:08",
+   "title": "Sign-off"
+  },
+  {
+   "t": "18:20",
+   "title": "Next video"
+  },
+  {
+   "t": "18:34",
+   "title": "End card"
+  }
+ ],
+ "credits": [
+  "Business Model Canvas adapted from the Business Model Canvas, designed by Strategyzer AG, strategyzer.com, licensed CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Changes were made.",
+  "Queue walkthrough built from a public Starter Story interview, Jan 2024.",
+  "Data sources shown on screen: World Wide Worx; CTech.",
+  "AI disclosure: the illustrations and the opening animation were created with AI image and video tools and then edited by me.",
+  "Company names and logos shown (Netflix, Takealot, Amazon, Airbnb, Shopify, Wix, Duolingo, Klarna, Claude and Queue) belong to their owners and appear for identification only; this video is not affiliated with or endorsed by any company mentioned."
+ ]
+}

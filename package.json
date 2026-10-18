@@ -4,7 +4,9 @@
   "type": "module",
   "scripts": {
     "build-tools": "node scripts/build-tools.mjs",
-    "build-guide-pdf": "node scripts/build-guide-pdf.mjs"
+    "build-guide-pdf": "node scripts/build-guide-pdf.mjs",
+    "seo-check": "node scripts/seo-check.mjs",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "devDependencies": {
     "marked": "^12.0.2",
