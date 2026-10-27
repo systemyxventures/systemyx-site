@@ -1,0 +1,59 @@
+<!--meta
+{
+ "eyebrow": "Strategy · Free Claude skill",
+ "title": "The Riskiest Guess Finder",
+ "lede": "Your idea is a prototype. Find the guess it rests on, then test it the cheapest way. This runs the same analysis from the video on your own idea — five guesses scored for risk and cost-to-test, the ranked order, and one test with a pass line and a fail line you set before you run it. You don't need to talk to anyone to start.",
+ "description": "Your free Riskiest Guess Finder — your five riskiest guesses scored for risk and cost-to-test, the leverage point, and the cheapest test with a pass and a fail line. Paste it into Claude and run it on your own idea.",
+ "kit_intro_h2": "When you know what to test — climb the ladder",
+ "kit_intro_lead": "The free tool names the guess to test first and the cheapest way to test it. The kit takes you up the ladder from there, and adds a conversation guide if you can reach people.",
+ "kit_detail": "Review-scan prompts, a smoke-test page and ad prompts, and pass/fail templates to take the guess the finder ranks first up the evidence ladder, with an optional conversation guide if you can reach people."
+}
+-->
+<section class="wrap">
+  <h2>How to use it</h2>
+  <p class="lead">It's a prompt you run in Claude — no install, nothing to download. About two minutes.</p>
+  <ol class="steps">
+    <li><span class="n">1</span><span class="t"><b>Copy the prompt</b> below.</span></li>
+    <li><span class="n">2</span><span class="t"><b>Paste it into Claude</b> (claude.ai — the free tier is fine).</span></li>
+    <li><span class="n">3</span><span class="t"><b>Add your idea</b> where marked — one or two sentences, and who you think has the problem; rough notes work — and send. If you don't have a customer in mind yet, say so and Claude will flag it.</span></li>
+  </ol>
+  <div class="promptwrap">
+    <button class="copy-btn" id="copyBtn" type="button">Copy</button>
+    <pre class="prompt" id="prompt">You're a sharp, systems-oriented analyst helping me decide what to test before I build. I don't want an opinion on whether my idea is good — I want to know which guess to test first, the cheapest way to test it, and what result would change my mind.
+
+The premise: my idea is a prototype — test it on real customers before building it. "Real customers" means real behaviour of real buyers; it does not have to mean conversations. Three anchors: the constraint is me — time, attention and access to people run out, so I can't test everything; the feedback signal is what customers do, not what they say; the leverage point is the riskiest guess that is cheap to test. If it is wrong, everything built on it cascades down with it: the product, the price, the pitch. That's the one to name.
+
+Keep every section concise and scannable — insight density, not length.
+
+You're in a plain chat with no connectors: you can't open websites, read live reviews, see ranks or run ads. Never claim to have looked at one and never invent one. Where a test needs something looked at, tell me exactly what to look at and that I can paste it back for you to read. You write the page, the ad, the post and the checklist; I publish and count what comes back.
+
+The evidence ladder, cheapest first. Pick the cheapest rung that can answer the guess; climb only as far as needed.
+(a) Existing behaviour — no people needed, you do the reading: competitor reviews (especially unhappy ones), best-seller rank, review counts, search autocomplete, how many listings compete. Once I paste them in, you group complaints into recurring situations and exact phrases. Reviews come only from people who bought and chose to write; best-seller rank is a rough signal, never a sales figure.
+(b) Triggered behaviour, no conversations — a smoke test (fake door): a sample-download page or a listing-style page with email capture or pre-order, plus a small ad spend or a community post. You build the page and write the ad; I publish it and count clicks, sign-ups or pre-orders.
+(c) Conversations — OPTIONAL. Offer only as "if you can reach people, I can help like this", and only if I said I can. Never choose (c) for the leverage point on your own, and never say or imply that anyone has to be interviewed.
+Use (a) when the guess is about what buyers already do or want, or how crowded the market is. Use (b) when it is whether a new offer gets a response. If (a) can only say "worth a closer look", name (b) as the step up.
+
+Here is my idea (rough notes, any format, are fine):
+<span class="ph">[PASTE YOUR IDEA HERE — one or two sentences, and who you think has the problem. If you haven't picked a customer yet, say so.]</span>
+
+Start with a heading "## Test Card" and, directly under it, one line in italics: "This test card holds: your riskiest guess, a risk and a cost-to-test score for five guesses, the ranked order with your leverage point, one test with a pass line and a fail line to set before you run it, and how to read the result." Nothing before it. After that, call it "the test card", never "card" alone. If I didn't name the customer, add "Customer: Not described — name the person you think has the problem" under it, make the first guess "Who has this problem at all", and never invent details I didn't give you.
+
+Then:
+
+1. FIVE RISKIEST GUESSES ("## Five Riskiest Guesses") — exactly five things my idea needs to be true that nobody has checked, specific to my idea, labelled G1 to G5, each one sentence that could turn out false. Things I've already proven with paying customers aren't guesses. Under each, an "Evidence:" line with one label taken only from what I wrote: seen (I say I observed it myself), told (I say someone told me), assumed (I state it as a belief with no sign I saw or was told it), or none stated (I wrote nothing about it). Quote my own words for seen, told and assumed. Never use your own knowledge as evidence, never upgrade a label. If I've spoken to no one, nothing can be seen or told. End with one line: "Evidence tally: Of 5 guesses: X assumed, Y told, Z seen, W none stated (from what you wrote)".
+
+2. RISK AND COST SCORES ("## Risk and Cost Scores") — per guess, one line "G1 — Risk 🔴 High · Cost-to-test 🟢 Cheap" and one sentence. Risk: 🟢 Low / 🟡 Medium / 🔴 High — how much collapses if it's wrong, and how little evidence exists. Cost-to-test: 🟢 Cheap / 🟡 Moderate / 🔴 Costly — time, money and access to get a real answer this week, on the cheapest rung that can answer it.
+
+3. RANKED ORDER ("## Ranked Order") — all five, highest risk first and cheapest to test breaking ties. Then "Leverage point:" the one guess to test first and why everything else cascades from it, and "Falls with it:" the guesses that only hold if it holds (or "none, it stands alone").
+
+4. THE TEST ("## The Test") — one test, for the leverage point only, on the cheapest rung that can answer it (name the rung and why it's enough, and the next rung up if it leaves the guess open). Lines: Rung, You do, I do, How long (about a week at most), Pass and Fail — observable behaviour counts with the numbers left as ___ for me to set (clicks, sign-ups, pre-orders, repeated phrases in reviews; never feelings or compliments). Never put a number in them unless I gave it. Then a short note: "Set the numbers before you run it" — fill every ___, write them down, don't change them after seeing results; Pass is the smallest result that would make me take the next step, Fail is the result that would make me change the idea, the customer or the claim, in between is unclear; the more the next step costs, the higher the pass number should be. Then one italic example: "Example only — made-up numbers to show the format, not a benchmark: 'Pass: 30 or more of the first 300 people who see the sample page leave an email. Fail: fewer than 5.'" No interview scripts, question lists or sample-size guidance.
+
+5. HOW TO READ YOUR RESULTS ("## How to Read Your Results") — Pass: the pass line was met by something people did; keep the guess and move to the next one. Fail: the fail line was met; the guess is wrong, so change the idea, the customer or the claim, and don't move the line. Unclear: neither was met; narrow the test, make it cheaper or step up a rung, and don't call it a pass. Then: what people did counts in full, what they said is a clue to check against what they did, compliments are not a pass, and a pass on rung (a) means "worth stepping up to (b)", not "the idea works".
+
+HONEST LINE — "Honest line: No fully automated validation exists. A human has to act (publish a page, post an ad, count what comes back), but you don't have to talk to anyone to start."
+
+BOTTOM LINE — name the leverage point in my own language: the guess to test first, and what result would change my mind. Then, on its own line, one soft pointer with no hard sell: "Next step: the paid kit, Business Idea Test Kit - Evidence Ladder Plan, takes you up the ladder: review-scan prompts, a smoke-test page and ad prompts, and pass/fail templates, with an optional conversation guide if you can reach people. It sits beside this tool: https://systemyxventures.com/tools/"
+
+Plain English, systems lens, smart peer — not a textbook. Be honest about severity. Never use "synergies", "ecosystem", or "value creation" without grounding it. Sign off in one line: "Industrial engineer. Building businesses in the age of AI. One system at a time."</pre>
+  </div>
+</section>
