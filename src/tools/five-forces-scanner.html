@@ -1,0 +1,71 @@
+<!--meta
+{
+ "eyebrow": "Strategy · Free Claude skill",
+ "title": "The Five Forces Scanner",
+ "lede": "Wanting your product is not the same as keeping the profit. This runs the scan from the video on your own idea: four to eight real rivals, a 1 to 5 score for each of the five pressures in your market with a source on every piece of evidence, the force map, the one pressure to deal with first, and a cheap check for this week. It is a reading of public evidence, not a verdict on your idea.",
+ "description": "Your free Five Forces Scanner: real rivals, a sourced 1 to 5 score for each of the five forces, the force map, your leverage point and one check to run this week. Paste it into Claude and run it on your own idea.",
+ "kit_intro_h2": "When you know the force to deal with first — go deeper",
+ "kit_intro_lead": "The free tool names the force that squeezes hardest and one check. The kit goes deeper on every force and gives you the order to work in.",
+ "kit_detail": "Research prompts for each force, an evidence tracker, a scoring guide, a counter-move menu, a fix-first priority sheet and a monthly re-scan routine, to take the force the scanner ranks first from a reading to a plan."
+}
+-->
+<section class="wrap">
+  <h2>How to use it</h2>
+  <p class="lead">It's a prompt you run in Claude — no install, nothing to download. About ten minutes to the first result.</p>
+  <ol class="steps">
+    <li><span class="n">1</span><span class="t"><b>Copy the prompt</b> below.</span></li>
+    <li><span class="n">2</span><span class="t"><b>Paste it into Claude</b> (claude.ai — the free tier is fine) and <b>turn web search on</b>, so the scan can read your market's public pages and attach the links. With web search off it still works: it asks you to paste what you know about three or more rivals and says so in the output.</span></li>
+    <li><span class="n">3</span><span class="t"><b>Fill in the four lines</b> where marked — your idea, your customer, where you will sell, and any rivals you already know — and send. Then open the links: the scan shows its sources so you can check them.</span></li>
+  </ol>
+  <div class="promptwrap">
+    <button class="copy-btn" id="copyBtn" type="button">Copy</button>
+    <pre class="prompt" id="prompt">You're a sharp, systems-oriented analyst. I want to know which of the five pressures in my market is most likely to squeeze my profit, with sources I can check, and the one cheap check to run this week. I don't want a verdict on whether my idea is good, or a promise of income or market size.
+
+The premise: people wanting a product is not the same as the maker keeping a profit. Five forces in the market decide how much anyone keeps. Define each in one plain line, once, at the top of the Force Scores section:
+- Rivals: who else is fighting for the same customers, and how hard (price cuts, features).
+- Buyers: how easily my customer can walk away or push my price down.
+- Suppliers: who I depend on, and how much they can raise their price or change terms.
+- New entrants: how easily someone new can show up and do what I do.
+- Substitutes: other ways to get the same result, including doing nothing or doing it by hand.
+The leverage point is the force with the highest pressure. I deal with it first, because improving a weak force while a strong one stays leaves profit where it was. This tool is the diagnosis: it names the force and one check. It does not prescribe fixes.
+
+Scores run 1 to 5, measured against what a well-placed player in this market faces. Say once, before the first score: 1 = weak pressure on my profit, 5 = severe. What to read for each force: rivals, how many comparable offers there are and how close their prices sit; buyers, how many steps it takes to switch; suppliers, how few alternatives I have for what I depend on; new entrants, how cheap it is to start; substitutes, how many other ways exist to get the job done.
+
+What I give you (ask for it in ONE short message if I haven't, then wait): 1. my idea in one or two sentences; 2. who the customer is; 3. where it will be sold (a city or country, or online and global); 4. optional, up to three rivals I already know. Don't start until you have 1 to 3. Never invent details I didn't give.
+
+Here is my idea (rough notes, any format, are fine):
+<span class="ph">[PASTE YOUR IDEA HERE — one or two sentences]</span>
+Who the customer is:
+<span class="ph">[WHO PAYS FOR IT]</span>
+Where it will be sold:
+<span class="ph">[A CITY OR COUNTRY, OR "ONLINE, GLOBAL"]</span>
+Rivals I already know (optional, up to three):
+<span class="ph">[NAMES, OR "NONE"]</span>
+
+Evidence rules. Use web search if you have it: open the pages and read them. If you cannot search the web, say so in one line directly under the "## Market Frame" heading (the contents note stays first, with nothing between it and that heading), ask me to paste what I know about three or more rivals (names, prices, what they do), and work only from that. Every evidence line carries a tag: seen (you found it at a source), inferred (you reasoned it from what you saw) or unknown (not found). Every score must be backed by evidence lines. A force with no evidence is scored "unknown", never guessed, and an unknown force can't be the leverage point. Every source is a real link you actually opened, with an as-of date written exactly "as of YYYY-MM-DD" (the date on the page, else today's date; if I only say "last week", work out the date). Never invent a source, a rival, a price or a number: a missing one is "not found". You can't see rivals' margins, churn or contracts, so say so where it matters.
+
+Keep it to one page: under 8,000 characters in total, so keep each rival, evidence and spot-check line to one short sentence. Plain English, no jargon without a one-line gloss, insight density over length.
+
+Start with a heading "## Market Frame" and, directly above it, one line in italics: "This scan holds: the market in one line, four to eight named rivals, a 1 to 5 score for each of the five forces with sourced evidence, the force map, your leverage point, one check for this week, and what to spot-check." Nothing before it. Then these sections, in this order, with these exact headings:
+
+1. MARKET FRAME ("## Market Frame") — the market in one line, then three short lines: "Rival:" who counts as one; "Substitute:" what counts as one; "Supplier:" who counts as one.
+
+2. RIVALS ("## Rivals") — four to eight real, named rivals, labelled R1, R2 and so on, each as "**R1 — Name** — one line on how they differ (price, focus, size) ([source](link))". If I named rivals, include them. If you find fewer than four real rivals, say exactly how many you found and stop adding.
+
+3. FORCE SCORES ("## Force Scores") — first the scale sentence ("1 = weak pressure on my profit, 5 = severe"), then the five one-line definitions as a short list; then five score lines, in this order: "**Rivals — 4/5**", "**Buyers — 2/5**", "**Suppliers — 3/5**", "**New entrants — 4/5**", "**Substitutes — 3/5**" (the numbers here are only the format; use "unknown" instead of a number where there is no evidence), each line exactly in that shape with no gloss inside the bold part, followed by one short sentence of why after it.
+
+4. EVIDENCE LINES ("## Evidence Lines") — under a bold force name each, two or three lines: "- **seen** — what you found ([source](link), as of YYYY-MM-DD)". Tags are seen, inferred or unknown, and only those. An unknown line says what you looked for and that it was not found. Every force still gets two lines: where a force has little or no evidence, give one unknown line for what you looked for and a second for what I could check or paste to fill the gap.
+
+5. THE FORCE MAP ("## The Force Map") — introduce it once in one sentence ("The force map is one table: each force, its score, its strongest evidence line and that line's tag."), then one table with the columns Force, Score, Strongest evidence, Tag and exactly five rows, then one line "**Overall pressure:**" in plain words.
+
+6. THE LEVERAGE POINT ("## The Leverage Point") — "**Leverage point:**" the highest-scoring force, then one sentence on why it bites. On a tie, the force with the most "seen" evidence wins; say so if you used the tie rule.
+
+7. ONE CHECK THIS WEEK ("## One Check This Week") — one cheap test (a few hours, no spend needed) that would confirm or weaken the top force. Lines: "Check:", "Pass:" and "Fail:", with pass and fail lines written before running it, as something observable. Put numbers in them only if they come from my inputs or the sources; otherwise leave ___ for me to set, and add one line: "Set the numbers before you run it, write them down, and don't change them after seeing the result."
+
+8. SPOT-CHECK LIST ("## Spot-Check List") — "**Check these three claims against the source:**" a numbered list of the three claims most worth checking, then "**What the scan could not find:**" one line.
+
+Then, each on its own line: "**Honest line:** This scan scores a market from public evidence. It is a reading, not a verdict on your idea, and an AI source can be wrong, old or invented, so open the links."; "**Bottom Line:**" name the leverage point in my own language and what result of the check would change my mind; "**Next step:** the paid kit, Competitor Analysis Kit - Five Forces Market Scorecard, goes deeper on each force: research prompts, a scoring guide, a fix-first order and a monthly re-scan routine. It sits beside this tool: https://systemyxventures.com/tools/"; then sign off in one line: "Industrial engineer. Building businesses in the age of AI. One system at a time."
+
+Never say whether my idea is good or bad, will work or will fail, or whether to build it. Never give a price, discount or code for the kit.</pre>
+  </div>
+</section>
