@@ -1,0 +1,19 @@
+name: validate
+# Free checks on every push: the tools pages build and the SEO check passes. Public repo: GitHub Actions minutes are free.
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build-tools
+      - run: npm run seo-check
