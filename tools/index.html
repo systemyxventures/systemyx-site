@@ -12,9 +12,11 @@
 <meta property="og:title" content="Tools &amp; kits — The Leverage Point Co">
 <meta property="og:description" content="Free tools and paid kits from The Leverage Point Co, one leverage point at a time.">
 <meta property="og:url" content="https://systemyxventures.com/tools/">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://i.ytimg.com/vi/8M6IpFpWObU/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"The Business Model Canvas — Risk Treatment Plan","description":"The worked example, the prioritisation matrix, and the exact fix order for your riskiest blocks.","url":"https://systemyxventures.com/tools/#bmc-risk-treatment-plan","brand":{"@type":"Brand","name":"The Leverage Point Co"},"offers":{"@type":"Offer","price":"39","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://systemyxventures.com/tools/#bmc-risk-treatment-plan"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Business Idea Test Kit - Evidence Ladder Plan","description":"Review-scan prompts, a smoke-test page and ad prompts, pass/fail templates and an optional conversation guide: everything you need to run the test the free Riskiest Guess Finder names first.","url":"https://systemyxventures.com/tools/#business-idea-test-kit","brand":{"@type":"Brand","name":"The Leverage Point Co"},"offers":{"@type":"Offer","price":"39","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://systemyxventures.com/tools/#business-idea-test-kit"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","name":"Breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://systemyxventures.com/"},{"@type":"ListItem","position":2,"name":"Tools & kits","item":"https://systemyxventures.com/tools/"}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
@@ -117,6 +119,60 @@
   .legal a,.foot-links a{color:var(--ink-soft);}
   @media (max-width:600px){ .capture,.ok,.card,.next{padding:18px 16px;} }
   [hidden]{display:none !important;}
+
+  /* Shared across every page: top navigation, author byline, thumbnails on cards. Home and About styles below. */
+  .topbar .mark{text-decoration:none;}
+  .topbar .brand a{text-decoration:none;}
+  .topnav{margin-left:auto;display:flex;gap:20px;font-size:14px;}
+  .topnav a{color:var(--ink-soft);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent;}
+  .topnav a:hover{color:var(--ink);border-bottom-color:var(--strategy);}
+  .topnav a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--strategy);}
+  .byline{display:flex;gap:16px;align-items:flex-start;padding-top:32px;padding-bottom:32px;}
+  .byline .by-mark{width:40px;height:40px;border-radius:10px;background:var(--strategy);color:var(--ink);font-family:"IBM Plex Mono",monospace;font-size:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .byline p{font-size:14px;color:var(--ink-soft);line-height:1.6;max-width:62ch;}
+  .byline p b{color:var(--ink);font-weight:600;}
+  .byline a{color:var(--ink);}
+  .start-card .thumb{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;border:1px solid var(--line);}
+
+  /* Home */
+  .home-hero{padding-top:72px;padding-bottom:48px;}
+  .home-hero h1{max-width:20ch;font-size:clamp(30px,6vw,48px);}
+  .home-hero .golden-thread{font-size:17px;max-width:58ch;}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);}
+  .btn.ghost:hover{border-color:var(--ink-soft);opacity:1;}
+  .kicker{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:14px;display:block;}
+  .latest{display:grid;gap:20px;grid-template-columns:1fr;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;}
+  .latest .poster{position:relative;display:block;aspect-ratio:16/9;background:#000;}
+  .latest .poster img{width:100%;height:100%;object-fit:cover;display:block;}
+  .latest .poster .vtri{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:var(--strategy);box-shadow:0 4px 24px rgba(0,0,0,.5);}
+  .latest .poster .vtri::after{content:"";position:absolute;left:25px;top:18px;border-left:22px solid var(--ink);border-top:14px solid transparent;border-bottom:14px solid transparent;}
+  .latest .info{padding:4px 22px 24px;}
+  .latest h3{font-size:20px;line-height:1.3;letter-spacing:-.01em;margin-bottom:8px;}
+  .latest p{color:var(--ink-soft);font-size:15px;margin-bottom:16px;max-width:60ch;}
+  .latest .row{display:flex;flex-wrap:wrap;gap:12px;}
+  @media (min-width:700px){ .latest{grid-template-columns:1.1fr 1fr;align-items:center;} .latest .info{padding:24px 24px 24px 4px;} }
+  .tool-cards{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
+  .tool-card{display:block;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px 18px;text-decoration:none;transition:border-color .15s,background .15s;}
+  .tool-card:hover{border-color:var(--strategy);background:var(--surface2);}
+  .tool-card .thumb{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;margin-bottom:12px;border:1px solid var(--line);}
+  .tool-card .t-name{display:block;font-weight:700;font-size:16px;letter-spacing:-.01em;margin:8px 0 4px;}
+  .tool-card .t-hook{display:block;color:var(--ink-soft);font-size:14px;line-height:1.5;}
+  .tool-card .t-go{display:block;margin-top:12px;font-weight:600;font-size:14px;color:var(--ink);}
+  .badge{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--strategy);color:var(--strategy);border-radius:999px;padding:3px 9px;display:inline-block;}
+  .ladder-steps{list-style:none;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));counter-reset:s;}
+  .ladder-steps li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;counter-increment:s;}
+  .ladder-steps li::before{content:counter(s);font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--strategy);border:1px solid var(--strategy);border-radius:999px;width:24px;height:24px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;}
+  .ladder-steps b{display:block;margin-bottom:4px;}
+  .ladder-steps span{color:var(--ink-soft);font-size:14.5px;line-height:1.55;}
+  .prose p{color:var(--ink-soft);font-size:15.5px;line-height:1.7;max-width:64ch;margin-bottom:14px;}
+  .prose p b{color:var(--ink);}
+  .prose ul{margin:0 0 14px 20px;color:var(--ink-soft);font-size:15.5px;line-height:1.7;max-width:64ch;}
+  .prose a{color:var(--ink);}
+  .more-videos{list-style:none;display:grid;gap:10px;}
+  .more-videos a{color:var(--ink-soft);text-decoration:none;}
+  .more-videos a:hover{color:var(--ink);text-decoration:underline;}
+  .credits p,.chapters a,.transcript p,.prose p{overflow-wrap:anywhere;}
 /* /tools/ index (build-tools): Start here, controls, collapsible resource rows. Inlined on the index page only. */
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
 .start{padding-top:32px;padding-bottom:8px;border-bottom:0;}
@@ -170,8 +226,9 @@
 
 <header class="topbar">
   <div class="wrap">
-    <div class="mark"><span>LP</span></div>
-    <div class="brand"><a href="/tools/" style="text-decoration:none;">The Leverage Point Co</a> <em>· free tools</em></div>
+    <a class="mark" href="/" aria-label="The Leverage Point Co home"><span>LP</span></a>
+    <div class="brand"><a href="/">The Leverage Point Co</a></div>
+    <nav class="topnav" aria-label="Main"><a href="/tools/" aria-current="page">Tools &amp; kits</a><a href="/about/">About</a></nav>
   </div>
 </header>
 <main>
@@ -183,7 +240,7 @@
 <section class="wrap start" id="start" aria-labelledby="start-h">
   <h2 id="start-h">Start here</h2>
   <div class="start-cards">
-    <a class="start-card" href="#bmc-stress-tester"><span class="badge b-tool">Free tool</span><span class="t-name">Business Model Stress-Tester</span><span class="t-hook">Find the block of your business model that fails first.</span></a>
+    <a class="start-card" href="#bmc-stress-tester"><img class="thumb" src="https://i.ytimg.com/vi/NX88x0fg6Bw/hqdefault.jpg" width="480" height="360" alt="" loading="lazy" decoding="async"><span class="badge b-tool">Free tool</span><span class="t-name">Business Model Stress-Tester</span><span class="t-hook">Find the block of your business model that fails first.</span></a>
     <a class="start-card" href="#claude-guide"><span class="badge b-guide">Guide</span><span class="t-name">The Claude Efficiency System</span><span class="t-hook">Get better results from the same Claude usage.</span></a>
   </div>
 </section>
@@ -202,6 +259,42 @@
 </section>
 <noscript><p class="wrap lead" style="padding-top:16px">JavaScript is off, so search and filters are not available. Tap any row to open it.</p></noscript>
 
+<section class="wrap vgroup" aria-labelledby="vh-customer-discovery-and-jobs-to-be-done">
+  <span class="vkicker">From the video · 5 November 2026</span>
+  <h2 class="vh" id="vh-customer-discovery-and-jobs-to-be-done">Everyone Says Your Business Idea Is Great? Test This First</h2><p class="lead"><a href="/videos/customer-discovery-and-jobs-to-be-done.html">Watch the video: chapters &amp; transcript →</a></p>
+  <details class="res" id="riskiest-guess-finder" open data-type="tool" data-topics="customer-discovery,validation,strategy" data-search="riskiest guess finder find the guess your idea rests on, and test it the cheapest way. paste your idea. get your five riskiest guesses scored, the leverage point, and the cheapest test with a pass line and a fail line you set in advance. anyone with a business or product idea they have not tested yet, who wants to know what to test first, before it costs money. a prompt you paste into claude (free tier is fine, no connectors): five riskiest guesses with risk and cost-to-test scores, the ranked order with the leverage point, one test on the cheapest rung (existing behaviour first, then a smoke test, conversations only if you want them) with a pass and a fail line to set before you run it, and how to read the result. customer-discovery validation strategy free tool everyone says your business idea is great? test this first">
+    <summary>
+      <h3 class="t-head">Riskiest Guess Finder <span class="badge b-tool">Free tool</span></h3>
+      <span class="t-hook">Find the guess your idea rests on, and test it the cheapest way.</span>
+    </summary>
+    <div class="body">
+      <dl>
+        <dt>What it does</dt><dd>Paste your idea. Get your five riskiest guesses scored, the leverage point, and the cheapest test with a pass line and a fail line you set in advance.</dd>
+        <dt>Who it's for</dt><dd>Anyone with a business or product idea they have not tested yet, who wants to know what to test first, before it costs money.</dd>
+        <dt>What you get</dt><dd>A prompt you paste into Claude (free tier is fine, no connectors): five riskiest guesses with risk and cost-to-test scores, the ranked order with the leverage point, one test on the cheapest rung (existing behaviour first, then a smoke test, conversations only if you want them) with a pass and a fail line to set before you run it, and how to read the result.</dd>
+        
+      </dl>
+      <p class="ladder">↓ Upgrades to <a href="#business-idea-test-kit">Business Idea Test Kit - Evidence Ladder Plan</a></p>
+      <div class="row"><a class="btn" href="/tools/riskiest-guess-finder.html?src=tools-index&amp;v=customer-discovery-and-jobs-to-be-done">Get it free →</a><a class="permalink" href="#riskiest-guess-finder">Link to this row</a></div>
+    </div>
+  </details>
+  <details class="res" id="business-idea-test-kit" open data-type="kit" data-topics="customer-discovery,validation,strategy" data-search="business idea test kit - evidence ladder plan run the test your riskiest guess needs, cheapest rung first. review-scan prompts, a smoke-test page and ad prompts, pass/fail templates and an optional conversation guide: everything you need to run the test the free riskiest guess finder names first. anyone who has run the free riskiest guess finder and has a test card to act on. a pdf with review-scan prompts, smoke-test page and ad prompts, pass/fail templates and an optional conversation guide, plus a worked example, nine root-cause prompts, an action menu, a priority matrix, and a tracker spreadsheet (blank and example copies). customer-discovery validation strategy kit everyone says your business idea is great? test this first">
+    <summary>
+      <h3 class="t-head">Business Idea Test Kit - Evidence Ladder Plan <span class="badge b-kit">Kit</span></h3>
+      <span class="t-hook">Run the test your riskiest guess needs, cheapest rung first.</span>
+    </summary>
+    <div class="body">
+      <dl>
+        <dt>What it does</dt><dd>Review-scan prompts, a smoke-test page and ad prompts, pass/fail templates and an optional conversation guide: everything you need to run the test the free Riskiest Guess Finder names first.</dd>
+        <dt>Who it's for</dt><dd>Anyone who has run the free Riskiest Guess Finder and has a test card to act on.</dd>
+        <dt>What you get</dt><dd>A PDF with review-scan prompts, smoke-test page and ad prompts, pass/fail templates and an optional conversation guide, plus a worked example, nine root-cause prompts, an action menu, a priority matrix, and a tracker spreadsheet (blank and example copies).</dd>
+        <dt>Price</dt><dd><span class="price"><s>$39</s>$29.25 with code LEVERAGE2026</span></dd>
+      </dl>
+      <p class="ladder">↑ Starts with the free <a href="#riskiest-guess-finder">Riskiest Guess Finder</a></p>
+      <div class="row"><a class="btn" href="https://lpc-api.lpc-api.workers.dev/r?type=paid&slug=business-idea-test-kit&to=https%3A%2F%2Ftheleveragepointco.lemonsqueezy.com%2Fcheckout%2Fbuy%2Fbe23eeae-f1cd-4ce9-95ba-45fc38adbb31">Get the kit →</a><a class="permalink" href="#business-idea-test-kit">Link to this row</a></div>
+    </div>
+  </details>
+</section>
 <section class="wrap vgroup" aria-labelledby="vh-business-model-canvas">
   <span class="vkicker">From the video · 15 October 2026</span>
   <h2 class="vh" id="vh-business-model-canvas">Let Claude Stress-Test Your Business Model Canvas</h2><p class="lead"><a href="/videos/business-model-canvas.html">Watch the video: chapters &amp; transcript →</a></p>
@@ -238,42 +331,6 @@
     </div>
   </details>
 </section>
-<section class="wrap vgroup" aria-labelledby="vh-customer-discovery-and-jobs-to-be-done">
-  <span class="vkicker">From the video</span>
-  <h2 class="vh" id="vh-customer-discovery-and-jobs-to-be-done">customer-discovery-and-jobs-to-be-done</h2>
-  <details class="res" id="riskiest-guess-finder" data-type="tool" data-topics="customer-discovery,validation,strategy" data-search="riskiest guess finder find the guess your idea rests on, and test it the cheapest way. paste your idea. get your five riskiest guesses scored, the leverage point, and the cheapest test with a pass line and a fail line you set in advance. anyone with a business or product idea they have not tested yet, who wants to know what to test first, before it costs money. a prompt you paste into claude (free tier is fine, no connectors): five riskiest guesses with risk and cost-to-test scores, the ranked order with the leverage point, one test on the cheapest rung (existing behaviour first, then a smoke test, conversations only if you want them) with a pass and a fail line to set before you run it, and how to read the result. customer-discovery validation strategy free tool customer-discovery-and-jobs-to-be-done">
-    <summary>
-      <h3 class="t-head">Riskiest Guess Finder <span class="badge b-tool">Free tool</span></h3>
-      <span class="t-hook">Find the guess your idea rests on, and test it the cheapest way.</span>
-    </summary>
-    <div class="body">
-      <dl>
-        <dt>What it does</dt><dd>Paste your idea. Get your five riskiest guesses scored, the leverage point, and the cheapest test with a pass line and a fail line you set in advance.</dd>
-        <dt>Who it's for</dt><dd>Anyone with a business or product idea they have not tested yet, who wants to know what to test first, before it costs money.</dd>
-        <dt>What you get</dt><dd>A prompt you paste into Claude (free tier is fine, no connectors): five riskiest guesses with risk and cost-to-test scores, the ranked order with the leverage point, one test on the cheapest rung (existing behaviour first, then a smoke test, conversations only if you want them) with a pass and a fail line to set before you run it, and how to read the result.</dd>
-        
-      </dl>
-      <p class="ladder">↓ Upgrades to <a href="#business-idea-test-kit">Business Idea Test Kit - Evidence Ladder Plan</a></p>
-      <div class="row"><a class="btn" href="/tools/riskiest-guess-finder.html?src=tools-index&amp;v=customer-discovery-and-jobs-to-be-done">Get it free →</a><a class="permalink" href="#riskiest-guess-finder">Link to this row</a></div>
-    </div>
-  </details>
-  <details class="res" id="business-idea-test-kit" data-type="kit" data-topics="customer-discovery,validation,strategy" data-search="business idea test kit - evidence ladder plan run the test your riskiest guess needs, cheapest rung first. review-scan prompts, a smoke-test page and ad prompts, pass/fail templates and an optional conversation guide: everything you need to run the test the free riskiest guess finder names first. anyone who has run the free riskiest guess finder and has a test card to act on. a pdf with review-scan prompts, smoke-test page and ad prompts, pass/fail templates and an optional conversation guide, plus a worked example, nine root-cause prompts, an action menu, a priority matrix, and a tracker spreadsheet (blank and example copies). customer-discovery validation strategy kit customer-discovery-and-jobs-to-be-done">
-    <summary>
-      <h3 class="t-head">Business Idea Test Kit - Evidence Ladder Plan <span class="badge b-kit">Kit</span></h3>
-      <span class="t-hook">Run the test your riskiest guess needs, cheapest rung first.</span>
-    </summary>
-    <div class="body">
-      <dl>
-        <dt>What it does</dt><dd>Review-scan prompts, a smoke-test page and ad prompts, pass/fail templates and an optional conversation guide: everything you need to run the test the free Riskiest Guess Finder names first.</dd>
-        <dt>Who it's for</dt><dd>Anyone who has run the free Riskiest Guess Finder and has a test card to act on.</dd>
-        <dt>What you get</dt><dd>A PDF with review-scan prompts, smoke-test page and ad prompts, pass/fail templates and an optional conversation guide, plus a worked example, nine root-cause prompts, an action menu, a priority matrix, and a tracker spreadsheet (blank and example copies).</dd>
-        <dt>Price</dt><dd><span class="price"><s>$39</s>$29.25 with code LEVERAGE2026</span></dd>
-      </dl>
-      <p class="ladder">↑ Starts with the free <a href="#riskiest-guess-finder">Riskiest Guess Finder</a></p>
-      <div class="row"><a class="btn" href="https://lpc-api.lpc-api.workers.dev/r?type=paid&slug=business-idea-test-kit&to=https%3A%2F%2Ftheleveragepointco.lemonsqueezy.com%2Fcheckout%2Fbuy%2Fbe23eeae-f1cd-4ce9-95ba-45fc38adbb31">Get the kit →</a><a class="permalink" href="#business-idea-test-kit">Link to this row</a></div>
-    </div>
-  </details>
-</section>
 <section class="wrap vgroup" aria-labelledby="vh-guides">
   <h2 class="vh" id="vh-guides">Guides &amp; references</h2>
   <details class="res" id="claude-guide" data-type="guide" data-topics="claude,ai,productivity,prompting" data-search="the claude efficiency system get better results from the same claude usage. a plain-english guide to better results from the same claude usage: what drives your limits, which model and effort to pick, prompts that work, and how to plan around the windows. operators and professionals who use claude for real work and either hit usage limits or get average output. a pdf you can read on your phone: the two limits and what spends them, a model-and-effort decision table, the five-part prompt with before-and-after examples, when to move to claude code, and a one-page cheat sheet. sourced to anthropic documentation and dated. claude ai productivity prompting guide ">
@@ -296,13 +353,17 @@
 <footer>
   <div class="wrap">
     <div class="foot-links">
+      <a href="/">Home</a>
       <a href="/tools/">All tools &amp; kits</a>
+      <a href="/about/">About</a>
       <a href="https://www.youtube.com/@TheLeveragePointCo?sub_confirmation=1" target="_blank" rel="noopener">▶ Subscribe on YouTube</a>
       <a href="https://www.linkedin.com/company/theleveragepointco" target="_blank" rel="noopener">Connect on LinkedIn</a>
       <a href="/legal/">Privacy</a>
-      <a href="mailto:theleveragepointco@gmail.com">theleveragepointco@gmail.com</a>
+      <a href="/legal/terms/">Terms</a>
+      <a href="/legal/refund/">Refunds</a>
+      <a href="mailto:tlp@systemyxventures.com">tlp@systemyxventures.com</a>
     </div>
-    <div class="foot-note">The Leverage Point Co — a Systemyx Ventures brand. Industrial engineer. Building businesses in the age of AI. One system at a time.</div>
+    <div class="foot-note">The Leverage Point Co — a Systemyx Ventures brand, South Africa. Industrial engineer. Building businesses in the age of AI. One system at a time.</div>
   </div>
 </footer>
 <script>

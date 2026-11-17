@@ -1,0 +1,80 @@
+{
+ "number": 2,
+ "duration": "PT9M40S",
+ "lead": "Customer discovery is checking, before you build, that real people have the problem you think they have. A friend's yes costs them nothing, so it can't tell you whether strangers will pay.",
+ "summary": "This video shows how to validate a business idea with AI: why the usual questions fail (The Mom Test), what building first cost the IMVU team, jobs to be done (the milkshake case), and an evidence ladder from cheapest to dearest. It ends with a live run of the free Riskiest Guess Finder on an example idea, using ten real reviews of a planner already on sale.",
+ "chapters": [
+  {
+   "t": "0:00",
+   "title": "Why a friend's yes can't validate your business idea"
+  },
+  {
+   "t": "0:43",
+   "title": "The cost of building first: the IMVU story"
+  },
+  {
+   "t": "1:33",
+   "title": "Why the usual questions fail: The Mom Test"
+  },
+  {
+   "t": "2:24",
+   "title": "Assumptions and customer discovery, defined"
+  },
+  {
+   "t": "3:04",
+   "title": "Two laws: test the cheapest guess first"
+  },
+  {
+   "t": "3:15",
+   "title": "Jobs to be done explained: the milkshake case"
+  },
+  {
+   "t": "3:48",
+   "title": "How AI is changing customer discovery: read what buyers already did"
+  },
+  {
+   "t": "4:12",
+   "title": "Real run: AI groups ten unhappy reviews"
+  },
+  {
+   "t": "5:12",
+   "title": "Smoke test and optional interviews"
+  },
+  {
+   "t": "5:45",
+   "title": "Limits of AI: a summary is not a customer"
+  },
+  {
+   "t": "6:04",
+   "title": "Riskiest Guess Finder: live demo (free tool)"
+  },
+  {
+   "t": "6:54",
+   "title": "Demand is the leverage point"
+  },
+  {
+   "t": "7:51",
+   "title": "Your move this week and the paid kit: how to run and read the test"
+  },
+  {
+   "t": "8:30",
+   "title": "Key takeaway: friends agreeing isn't evidence"
+  },
+  {
+   "t": "8:51",
+   "title": "Free tool and next video"
+  }
+ ],
+ "credits": [
+  "Source: Rob Fitzpatrick, The Mom Test (book), quotes: https://www.goodreads.com/work/quotes/26235307",
+  "Source: Eric Ries, \"The Science of Lean Startups\", Business of Software 2010: https://businessofsoftware.org/talks/eric-ries-the-science-of-lean-startups/",
+  "Source: Eric Ries, Mixergy interview, 5 May 2009: https://mixergy.com/interviews/ries-lean/",
+  "Source: Christensen Institute, 7 Oct 2016 (milkshake case): https://www.christenseninstitute.org/blog/students-buying-selling/",
+  "Source: Harvard Business School Working Knowledge, 14 Feb 2011 (milkshake case): https://www.library.hbs.edu/working-knowledge/clay-christensens-milkshake-marketing",
+  "Source: Christensen Institute, jobs to be done: https://www.christenseninstitute.org/theory/jobs-to-be-done/",
+  "Source: Racherla, Connolly and Christodoulidou, 2011, Cornell Center for Hospitality Research (vacation-rental reviews only, not books or Amazon): https://ecommons.cornell.edu/entities/publication/e01e1d7c-c7c4-48e6-acf4-b460d7463549",
+  "Source: KDP help (low-content books; books produced as ordered): https://kdp.amazon.com/en_US/help/topic/GGE5T76TWKA85DJM ; https://kdp.amazon.com/en_US/help/topic/G201834180",
+  "AI disclosure: about 40% of the narration is generated with an AI clone of my own voice, reading my own script; the rest is my own recording. The illustrations start from AI-generated images (Canva) that are redrawn and animated with code. The screen recordings are real.",
+  "Not affiliated with or endorsed by any company, publisher or person named in this video, including Amazon, IMVU and Anthropic; the credits below name the sources of the facts and quotes used."
+ ]
+}

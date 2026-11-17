@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://systemyxventures.com/</loc></url>
-  <url><loc>https://systemyxventures.com/tools/bmc-stress-tester.html</loc></url>
-  <url><loc>https://systemyxventures.com/tools/claude-guide.html</loc></url>
-  <url><loc>https://systemyxventures.com/tools/riskiest-guess-finder.html</loc></url>
-  <url><loc>https://systemyxventures.com/tools/</loc></url>
+  <url><loc>https://systemyxventures.com/</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>https://systemyxventures.com/about/</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>https://systemyxventures.com/legal/terms/</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>https://systemyxventures.com/legal/refund/</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>https://systemyxventures.com/tools/bmc-stress-tester.html</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>https://systemyxventures.com/tools/claude-guide.html</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>https://systemyxventures.com/tools/riskiest-guess-finder.html</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>https://systemyxventures.com/tools/</loc><lastmod>2026-10-27</lastmod></url>
   <url><loc>https://systemyxventures.com/videos/business-model-canvas.html</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://systemyxventures.com/legal/</loc></url>
+  <url><loc>https://systemyxventures.com/videos/customer-discovery-and-jobs-to-be-done.html</loc><lastmod>2026-11-05</lastmod></url>
+  <url><loc>https://systemyxventures.com/legal/</loc><lastmod>2026-10-27</lastmod></url>
 </urlset>

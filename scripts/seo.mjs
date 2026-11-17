@@ -108,6 +108,10 @@ export function softwareApplication({ name, description, url, free = true }) {
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, publisher: publisher()
   };
 }
+export const breadcrumbs = items => ({
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList', name: 'Breadcrumbs',
+  itemListElement: items.map((it, i) => ({ '@type': 'ListItem', position: i + 1, name: it.name, item: it.url }))
+});
 export function creativeWork({ name, description, url }) {
   return { '@context': 'https://schema.org', '@type': 'CreativeWork', name, description, url, isAccessibleForFree: true, publisher: publisher() };
 }

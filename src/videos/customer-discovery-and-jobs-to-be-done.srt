@@ -1,0 +1,953 @@
+1
+00:00:00,000 --> 00:00:03,000
+You have this great business idea,
+and your friends all say it's great.
+
+2
+00:00:03,440 --> 00:00:06,240
+That's kind, but a friend's
+yes costs them nothing,
+
+3
+00:00:06,600 --> 00:00:08,140
+so it can't tell you
+if strangers will pay.
+
+4
+00:00:08,765 --> 00:00:11,025
+So then comes the question,
+what does tell you?
+
+5
+00:00:11,225 --> 00:00:12,665
+Before you spend months building it?
+
+6
+00:00:13,205 --> 00:00:15,345
+Most people assume you have
+to go and talk to strangers.
+
+7
+00:00:16,025 --> 00:00:18,425
+And while there is truth to
+that, if you are like me,
+
+8
+00:00:18,665 --> 00:00:20,085
+that sounds awkward and slow.
+
+9
+00:00:20,525 --> 00:00:21,625
+You can start without that.
+
+10
+00:00:22,045 --> 00:00:25,345
+In most cases, buyers of similar
+products have already left evidence,
+
+11
+00:00:25,725 --> 00:00:27,925
+and the best part is,
+AI can read it for you.
+
+12
+00:00:28,476 --> 00:00:31,296
+Later in this video I will take
+you through this free AI tool,
+
+13
+00:00:31,696 --> 00:00:35,416
+the Riskiest Guess Finder, it finds
+and ranks the guesses an idea rests
+
+14
+00:00:35,436 --> 00:00:37,516
+on and writes the cheapest test for it.
+
+15
+00:00:37,996 --> 00:00:40,956
+Here it is on an example idea,
+a series of KDP planners,
+
+16
+00:00:41,456 --> 00:00:42,656
+and you can also run it on yours.
+
+17
+00:00:43,599 --> 00:00:46,379
+Just to show you, here's
+what building first can cost.
+
+18
+00:00:47,039 --> 00:00:49,019
+Eric Ries co-founded
+a company called IMVU,
+
+19
+00:00:49,319 --> 00:00:52,919
+and in a 2010 talk he said his team
+spent about six months building an add-on
+
+20
+00:00:52,939 --> 00:00:54,039
+for instant-messaging apps.
+
+21
+00:00:54,501 --> 00:00:58,281
+Then in his 2009 interview he described
+a tester who wouldn't even invite
+
+22
+00:00:58,301 --> 00:00:59,561
+a friend to use the feature.
+
+23
+00:01:00,021 --> 00:01:02,301
+The idea didn't hold up, and in his words
+
+24
+00:01:02,321 --> 00:01:04,581
+they wound up having to
+throw all of that code away.
+
+25
+00:01:04,929 --> 00:01:06,769
+Would anyone even have
+clicked a download button?
+
+26
+00:01:07,309 --> 00:01:09,209
+His own answer was basically no.
+
+27
+00:01:09,789 --> 00:01:11,629
+That six months wasted, taught what
+
+28
+00:01:11,649 --> 00:01:13,648
+a cheaper test could have
+shown from the start.
+
+29
+00:01:13,908 --> 00:01:17,568
+Your idea runs the same risk, and the
+belief behind it is usually that if
+
+30
+00:01:17,588 --> 00:01:18,988
+people like it, it's wanted.
+
+31
+00:01:19,568 --> 00:01:20,948
+But liking costs them nothing.
+
+32
+00:01:21,408 --> 00:01:25,928
+Your idea is a prototype: test it on
+real customers before you build it.
+
+33
+00:01:26,441 --> 00:01:30,521
+What guess does your idea rest on,
+how can AI get you evidence before you
+
+34
+00:01:30,541 --> 00:01:32,721
+build, and which test
+should you run this week.
+
+35
+00:01:33,627 --> 00:01:36,007
+But first, why the usual questions fail.
+
+36
+00:01:36,547 --> 00:01:38,847
+Pitching your idea makes
+the conversation about you.
+
+37
+00:01:39,469 --> 00:01:41,889
+And asking "would you buy
+this?", is asking about
+
+38
+00:01:41,909 --> 00:01:44,169
+a future that costs
+someone nothing to promise.
+
+39
+00:01:44,563 --> 00:01:47,423
+Both of those invite a
+kind person to be kind.
+
+40
+00:01:47,863 --> 00:01:49,823
+it's the approach that
+goes wrong, not the people.
+
+41
+00:01:50,323 --> 00:01:52,643
+So the easy guesses get
+tested, and the one that
+
+42
+00:01:52,663 --> 00:01:55,102
+would kill the idea
+waits until it's built.
+
+43
+00:01:55,362 --> 00:01:57,222
+Rob Fitzpatrick, wrote The Mom Test.
+
+44
+00:01:57,602 --> 00:01:59,582
+It says you should ask
+about the past instead.
+
+45
+00:01:59,962 --> 00:02:02,202
+Which is the same as looking
+at what buyers already did.
+
+46
+00:02:03,094 --> 00:02:04,194
+Take the example idea.
+
+47
+00:02:04,454 --> 00:02:07,514
+Weekly planner paperbacks, printed by
+Amazon only when someone orders one.
+
+48
+00:02:07,934 --> 00:02:10,714
+The plan is a whole series, each
+book made for one kind of person.
+
+49
+00:02:11,154 --> 00:02:13,114
+It's a typical example,
+you can find multiple
+
+50
+00:02:13,134 --> 00:02:14,978
+youtube videos explaining how to do it.
+
+51
+00:02:15,238 --> 00:02:16,998
+Underneath that sits a stack of guesses,
+
+52
+00:02:17,798 --> 00:02:19,878
+like "freelancers search
+Amazon for planners",
+
+53
+00:02:19,898 --> 00:02:22,858
+and "they would pick a design
+specifically made for them over a generic
+
+54
+00:02:22,878 --> 00:02:24,398
+one". Each one feels true.
+
+55
+00:02:24,999 --> 00:02:27,399
+Maybe one person even said
+they wanted exactly that,
+
+56
+00:02:27,659 --> 00:02:29,239
+but one anecdote is not proof.
+
+57
+00:02:29,699 --> 00:02:33,179
+Those guesses are called assumptions:
+what you believe about who has the
+
+58
+00:02:33,199 --> 00:02:35,819
+problem, how badly, and
+what they do about it today.
+
+59
+00:02:36,319 --> 00:02:39,779
+Checking your assumptions before you
+build it is customer discovery: finding
+
+60
+00:02:39,799 --> 00:02:42,819
+out whether real people have the
+problem and what they would pay for it.
+
+61
+00:02:43,413 --> 00:02:45,093
+Like the business model in my last video,
+
+62
+00:02:45,633 --> 00:02:47,493
+testing an idea should
+be seen as a system.
+
+63
+00:02:48,053 --> 00:02:51,073
+Time and access to customers run
+out, so you can't test everything.
+
+64
+00:02:51,593 --> 00:02:53,713
+The signal worth trusting,
+is what people do.
+
+65
+00:02:54,333 --> 00:02:57,413
+So your leverage point is the
+riskiest guess that's cheap to test.
+
+66
+00:02:57,773 --> 00:03:00,453
+If it's wrong, everything
+resting on it cascades
+
+67
+00:03:00,473 --> 00:03:03,433
+down with it: the product,
+the price, the pitch.
+
+68
+00:03:04,273 --> 00:03:05,993
+Two laws help you find that guess.
+
+69
+00:03:06,493 --> 00:03:08,853
+Law one: test where change is cheapest.
+
+70
+00:03:09,313 --> 00:03:12,013
+A flaw found before you
+build costs a small test.
+
+71
+00:03:12,433 --> 00:03:14,513
+But found after, it costs the whole build.
+
+72
+00:03:15,109 --> 00:03:17,489
+Law two: measure behaviour, not opinion.
+
+73
+00:03:18,109 --> 00:03:21,409
+Clayton Christensen told a story
+about a fast-food chain and how people
+
+74
+00:03:21,429 --> 00:03:25,789
+"hired" its milkshakes, which is his
+jargon for "bringing a product into
+
+75
+00:03:25,809 --> 00:03:27,349
+your life to get a job done".
+
+76
+00:03:27,817 --> 00:03:30,017
+More shakes than you'd
+expect sold early in the day,
+
+77
+00:03:30,277 --> 00:03:33,617
+to commuters, who hired one to fill
+a boring drive and keep hunger away.
+
+78
+00:03:34,277 --> 00:03:36,097
+Parents, in the afternoon,
+hired it for a different job.
+
+79
+00:03:36,693 --> 00:03:40,693
+Christensen calls this jobs to be done:
+people hire a product to make progress
+
+80
+00:03:40,713 --> 00:03:43,793
+in a situation. The clue
+was behaviour: when it sold,
+
+81
+00:03:44,073 --> 00:03:47,733
+and who was buying. Find the job, and
+the product, price and pitch follow.
+
+82
+00:03:48,445 --> 00:03:50,005
+So where do you find that behaviour?
+
+83
+00:03:50,645 --> 00:03:52,405
+Evidence comes like rungs on a ladder,
+
+84
+00:03:53,005 --> 00:03:56,565
+cheapest first, and the cheapest
+rung needs nobody to talk to.
+
+85
+00:03:56,945 --> 00:03:59,405
+Rung one is existing
+behaviour: what buyers
+
+86
+00:03:59,425 --> 00:04:01,945
+of similar products already did and wrote.
+
+87
+00:04:02,253 --> 00:04:05,353
+That used to mean going through
+everything customers said, by hand.
+
+88
+00:04:06,033 --> 00:04:09,113
+Now, a language model can read a pile
+of reviews and group them into the
+
+89
+00:04:09,133 --> 00:04:11,953
+struggles that keep coming back,
+in the customers' exact words.
+
+90
+00:04:12,894 --> 00:04:16,014
+Here's a real run on real reviews
+of a planner already on sale.
+
+91
+00:04:16,654 --> 00:04:20,434
+I pasted ten unhappy reviews into a free
+Claude chat and asked for the situations
+
+92
+00:04:20,454 --> 00:04:23,594
+people were in. The more you
+give it, the more it can analyse.
+
+93
+00:04:24,374 --> 00:04:25,934
+Claude came back with six situations.
+
+94
+00:04:26,617 --> 00:04:29,617
+The three biggest each had three
+reviews: planning the weekend,
+
+95
+00:04:30,057 --> 00:04:31,937
+expecting more room
+than it has, and a part
+
+96
+00:04:31,957 --> 00:04:33,881
+failing from normal day to day use.
+
+97
+00:04:34,141 --> 00:04:35,621
+Claude also flagged its own doubts.
+
+98
+00:04:36,221 --> 00:04:37,721
+One review never mentions the weekend,
+
+99
+00:04:37,861 --> 00:04:40,921
+so it was placed by inference, and
+some reviews contradict each other,
+
+100
+00:04:41,101 --> 00:04:42,281
+like thick paper against thin.
+
+101
+00:04:42,701 --> 00:04:45,841
+That's why you spot-check three against
+the originals: the sorting and counting
+
+102
+00:04:45,861 --> 00:04:47,461
+are the model's work,
+so they can be wrong.
+
+103
+00:04:48,054 --> 00:04:51,054
+An unhappy review is a customer
+describing the situation they were in.
+
+104
+00:04:51,434 --> 00:04:53,994
+I've noticed this myself,
+reading reviews before buying,
+
+105
+00:04:54,394 --> 00:04:56,074
+that when a product
+misses a big expectation,
+
+106
+00:04:56,474 --> 00:04:59,114
+people usually explain why they're
+frustrated, not just that it was bad.
+
+107
+00:04:59,742 --> 00:05:03,182
+Research on vacation-rental reviews
+found the same pattern: negative reviews
+
+108
+00:05:03,202 --> 00:05:05,222
+tend to run long and
+describe disappointment
+
+109
+00:05:05,242 --> 00:05:07,142
+when expectations weren't met.
+
+110
+00:05:07,542 --> 00:05:10,522
+What people write after a product
+lets them down is closer to what they
+
+111
+00:05:10,542 --> 00:05:12,102
+did than to just what they'd say.
+
+112
+00:05:12,991 --> 00:05:14,391
+That's rung one of our ladder.
+
+113
+00:05:14,811 --> 00:05:18,191
+Rung two goes further, because it
+creates behaviour that doesn't exist yet.
+
+114
+00:05:18,611 --> 00:05:21,191
+That's a smoke test. It's
+a simple page offering a
+
+115
+00:05:21,211 --> 00:05:23,755
+free sample of the product,
+with an email sign-up.
+
+116
+00:05:24,015 --> 00:05:26,695
+Then a small ad or a community
+post sends people there.
+
+117
+00:05:27,115 --> 00:05:28,295
+Now you can see what people do.
+
+118
+00:05:28,735 --> 00:05:30,295
+AI builds the page and writes the ad.
+
+119
+00:05:30,655 --> 00:05:32,935
+You put them live, set the
+spend and read the count,
+
+120
+00:05:33,255 --> 00:05:34,695
+because that count is your evidence.
+
+121
+00:05:35,394 --> 00:05:37,774
+Before you start, you set a
+pass line and a fail line.
+
+122
+00:05:38,134 --> 00:05:39,514
+They're the counts that mean keep going,
+
+123
+00:05:39,794 --> 00:05:41,334
+and the counts that mean stop and rethink.
+
+124
+00:05:41,874 --> 00:05:44,934
+You set them first, so you can't
+talk yourself into a pass afterwards.
+
+125
+00:05:45,623 --> 00:05:47,563
+One caution to keep in
+mind with the free tool.
+
+126
+00:05:48,003 --> 00:05:49,623
+Here's my view, not research.
+
+127
+00:05:50,183 --> 00:05:52,483
+An AI summary of reviews
+is not an actual customer,
+
+128
+00:05:52,903 --> 00:05:54,243
+and neither is an AI playing one.
+
+129
+00:05:55,003 --> 00:05:57,423
+Use AI to read real words and to prepare,
+
+130
+00:05:57,803 --> 00:06:00,243
+but the real evidence still
+comes from what real people do.
+
+131
+00:06:00,643 --> 00:06:03,483
+It gives you insight to what
+people said, not what they will do.
+
+132
+00:06:04,378 --> 00:06:05,558
+Back to the example idea.
+
+133
+00:06:06,058 --> 00:06:07,478
+Here's the free guess finder tool.
+
+134
+00:06:07,958 --> 00:06:11,718
+Two sentences go in: weekly planner
+paperbacks for freelancers who work
+
+135
+00:06:11,738 --> 00:06:15,238
+from home, plus the logic (or
+rather beliefs) behind the idea.
+
+136
+00:06:15,923 --> 00:06:17,283
+What comes back is the test card.
+
+137
+00:06:17,603 --> 00:06:20,743
+It holds five guesses with a risk
+score and a cost score for each,
+
+138
+00:06:21,263 --> 00:06:24,483
+the ranked order, one test with
+a pass line and a fail line,
+
+139
+00:06:24,663 --> 00:06:25,763
+and how to read the result.
+
+140
+00:06:26,332 --> 00:06:29,512
+The first guess is that home-working
+freelancers have a week-organising
+
+141
+00:06:29,532 --> 00:06:32,152
+problem bad enough that they'd
+buy a paper planner for it.
+
+142
+00:06:32,532 --> 00:06:34,812
+The other four cover
+search, the specific design,
+
+143
+00:06:35,252 --> 00:06:37,032
+repeat buying and how
+crowded the space is.
+
+144
+00:06:37,699 --> 00:06:41,059
+The first guess, demand, comes
+back high risk and cheap to test.
+
+145
+00:06:41,690 --> 00:06:43,270
+The ranking after demand is crowding,
+
+146
+00:06:43,490 --> 00:06:46,090
+then the design claim, then
+search, then repeat buying.
+
+147
+00:06:47,650 --> 00:06:49,450
+You might expect the
+design claim to come first,
+
+148
+00:06:49,570 --> 00:06:51,470
+since it's the whole
+pitch, but it ranks third,
+
+149
+00:06:51,670 --> 00:06:53,670
+because it costs more to
+test than demand or crowding.
+
+150
+00:06:54,418 --> 00:06:57,918
+Demand beats crowding because crowding
+only matters if demand exists.
+
+151
+00:06:58,438 --> 00:06:59,878
+So the leverage point is demand.
+
+152
+00:07:00,398 --> 00:07:03,898
+Do freelancers who work from home
+really want a paper planner to fix their
+
+153
+00:07:03,918 --> 00:07:06,398
+week? If that's wrong, the search, design
+
+154
+00:07:06,418 --> 00:07:09,238
+and repeat-buying guesses fall with it.
+
+155
+00:07:09,498 --> 00:07:11,478
+The test starts on rung one of the ladder,
+
+156
+00:07:11,898 --> 00:07:15,218
+because this guess is about what
+buyers already do and complain about.
+
+157
+00:07:15,718 --> 00:07:17,858
+It's about two to three
+hours of copying the reviews,
+
+158
+00:07:18,298 --> 00:07:19,958
+or you can let AI collect them for you.
+
+159
+00:07:20,258 --> 00:07:22,098
+Then it reads everything in one pass.
+
+160
+00:07:22,792 --> 00:07:23,972
+Here's how you read the result.
+
+161
+00:07:24,472 --> 00:07:26,352
+A pass means keep the guess and move on.
+
+162
+00:07:26,792 --> 00:07:29,492
+A fail means change the idea,
+the customer or the claim.
+
+163
+00:07:30,212 --> 00:07:31,832
+Anything in between means narrow the test,
+
+164
+00:07:32,072 --> 00:07:33,752
+make it cheaper or step up on the ladder.
+
+165
+00:07:34,432 --> 00:07:37,152
+The tool also gives an honest
+line, and I agree with it.
+
+166
+00:07:37,472 --> 00:07:39,372
+No fully automated validation exists.
+
+167
+00:07:39,892 --> 00:07:42,712
+A human has to act, but you don't
+have to talk to anyone to start.
+
+168
+00:07:43,307 --> 00:07:45,827
+So the answer to the question
+from the start is behaviour.
+
+169
+00:07:46,427 --> 00:07:48,227
+It starts with what buyers already did,
+
+170
+00:07:48,507 --> 00:07:50,567
+and then moves to what they
+do when you offer something.
+
+171
+00:07:51,283 --> 00:07:55,023
+Your move this week: run the Riskiest
+Guess Finder on your own idea.
+
+172
+00:07:55,503 --> 00:07:57,963
+Fill in your pass and fail numbers
+before you look at anything.
+
+173
+00:07:58,967 --> 00:08:02,287
+If your test card gave you a test,
+the next questions are how to run it
+
+174
+00:08:02,307 --> 00:08:03,907
+and how to read what comes back.
+
+175
+00:08:04,467 --> 00:08:07,887
+That's what the Business Idea Test
+Kit adds: the Evidence Ladder Plan.
+
+176
+00:08:08,588 --> 00:08:11,788
+So it follows the same ladder:
+prompts to scan competitor reviews,
+
+177
+00:08:12,188 --> 00:08:15,948
+a smoke-test page and ad prompts, and
+templates for your pass and fail lines.
+
+178
+00:08:16,626 --> 00:08:19,406
+If you can reach people, there's
+an optional conversation guide too.
+
+179
+00:08:19,726 --> 00:08:21,286
+It's for people who want to run the tests,
+
+180
+00:08:21,506 --> 00:08:23,886
+not just plan them. The discount
+code is in the description.
+
+181
+00:08:24,426 --> 00:08:27,366
+If you just want to get an idea of the
+risks of your business idea guesses,
+
+182
+00:08:27,746 --> 00:08:29,946
+then it's perfectly fine to just
+use the free guess finder tool.
+
+183
+00:08:30,612 --> 00:08:32,312
+Here's what you should
+take away from this video.
+
+184
+00:08:32,712 --> 00:08:34,632
+Your idea is an unverified prototype,
+
+185
+00:08:34,952 --> 00:08:37,512
+no matter how great you and the
+people closest to you think it is.
+
+186
+00:08:37,792 --> 00:08:39,792
+Test it on real customers
+before you build it.
+
+187
+00:08:40,292 --> 00:08:42,532
+Look at the behaviour of
+your competitors' customers.
+
+188
+00:08:43,072 --> 00:08:46,392
+The time spent verifying before building
+is cheap compared to the time put
+
+189
+00:08:46,412 --> 00:08:50,152
+in to make and then remake it (or having
+to throw it all away after finding
+
+190
+00:08:50,172 --> 00:08:51,272
+no customer uptake).
+
+191
+00:08:51,818 --> 00:08:53,518
+The Riskiest Guess Finder tool is free,
+
+192
+00:08:53,878 --> 00:08:55,838
+the link to get it emailed
+to you is in the description.
+
+193
+00:08:56,458 --> 00:08:59,178
+If people aren't willing to pay,
+there's nothing worth building yet.
+
+194
+00:08:59,558 --> 00:09:00,658
+Think about that for a moment.
+
+195
+00:09:01,060 --> 00:09:03,840
+The cheapest time to find out you're
+wrong is always before you build.
+
+196
+00:09:04,340 --> 00:09:05,560
+Friends agreeing isn't evidence.
+
+197
+00:09:05,860 --> 00:09:06,980
+Strangers acting is.
+
+198
+00:09:07,400 --> 00:09:09,580
+Tell me in the comments:
+what's the one guess your
+
+199
+00:09:09,600 --> 00:09:11,656
+idea depends on that you've never tested?
+
+200
+00:09:11,916 --> 00:09:13,096
+Industrial engineer.
+
+201
+00:09:13,476 --> 00:09:15,396
+Building businesses in the age of AI.
+
+202
+00:09:15,916 --> 00:09:17,096
+One system at a time.
+
+203
+00:09:17,616 --> 00:09:19,236
+Subscribe and build with me.
+
+204
+00:09:19,796 --> 00:09:22,176
+Next time: you know
+whether customers want it.
+
+205
+00:09:22,576 --> 00:09:24,136
+But who else already serves them?
+
+206
+00:09:24,456 --> 00:09:26,136
+How to read the competitive battlefield.
