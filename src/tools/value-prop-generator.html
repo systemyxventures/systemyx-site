@@ -1,0 +1,67 @@
+<!--meta
+{
+ "eyebrow": "Strategy · Free Claude skill",
+ "title": "The Value Prop Generator",
+ "lede": "Your customers have already written what makes them choose. Paste 10 to 30 real comments about your rivals or similar products and this reads them for you: the top jobs, pains and gains in their own words with a quote each, three ranked value propositions, a so-what test for each, the one to try first and a short check to run with five real people. It never invents a quote and never says whether your idea is good.",
+ "description": "Your free Value Prop Generator: paste real customer comments and get the top jobs, pains and gains in their own words, three ranked value propositions, a so-what test and a five-person check. Runs in a free Claude account.",
+ "kit_intro_h2": "When you want to keep doing this as your market changes",
+ "kit_intro_lead": "The free tool turns one batch of customer words into one line to test. The kit is for the next rounds: re-reading the words on a schedule, templates for the one-line pitch, and a script for the five-person check.",
+ "kit_detail": "A monthly re-read routine for your market's customer words, a one-page value proposition template, so-what test cards, an interview script for the five-person check, and a worked example from public reviews."
+}
+-->
+<section class="wrap">
+  <h2>How to use it</h2>
+  <p class="lead">It's a prompt you run in Claude: no install, nothing to download. Gathering the comments is the slow part; the reading takes about a minute.</p>
+  <ol class="steps">
+    <li><span class="n">1</span><span class="t"><b>Collect 10 to 30 real comments</b> from customers of your rivals or of similar products (public reviews, forum posts, your own emails). Copy a sentence or a few lines from each, a mix of happy and unhappy. Check the site's rules before you copy.</span></li>
+    <li><span class="n">2</span><span class="t"><b>Copy the prompt</b> below and paste it into Claude (claude.ai, the free plan is fine).</span></li>
+    <li><span class="n">3</span><span class="t"><b>Add your idea, your customer, the comments and one line on where rivals fall short</b>, then send. If you leave something out, Claude asks once.</span></li>
+  </ol>
+  <div class="promptwrap">
+    <button class="copy-btn" id="copyBtn" type="button">Copy</button>
+    <pre class="prompt" id="prompt">The instructions below are written from the user's side ("my idea"). Follow them as the analyst. This tool works in a plain free Claude chat: you cannot open websites, so you work only from the text I paste.
+
+You're a sharp, systems-oriented analyst. I want a value proposition built from my customers' own words, not from my head and not from a generic slogan. I don't want a verdict on whether my idea is good, or a promise of sales.
+
+The premise: customers have already told the market what they want, in reviews, forum posts and emails. A value proposition is the one or two things on the customer's side that matter most, answered by something my offer really does. Everything in the offer the customer would not pay for stays out of the pitch. Define these once, in one plain line each, at the top of the Customer Words section:
+- Job: what the customer is trying to get done.
+- Pain: what goes wrong, costs them, or annoys them while they try.
+- Gain: what they would be glad to get, beyond just getting the job done.
+- Value proposition: one sentence that says which job, which pain or gain, and why my offer answers it better than the other choices.
+
+What I give you (ask for it in ONE short message if I haven't, then wait):
+1. my idea in one or two sentences;
+2. who the customer is;
+3. 10 to 30 pieces of real customer text, pasted in, each a sentence or a few lines (reviews of rivals or of similar products, forum posts, emails from real customers). Say where each came from if I know;
+4. the competitor gap: one line on where rivals leave customers short (from the Five Forces Scanner, or my own words). Optional; if missing, work without it and say so.
+Don't start until you have 1 to 3. Fewer than 10 pieces: say exactly how many you have, and mark every result "thin evidence". Never invent customer text, quotes or details I didn't give.
+
+Evidence rules. Every quote is copied word for word from my pasted text, in quotation marks, with its piece number ([P3]). Never tidy, merge or invent a quote. If a theme has no usable quote, write "no quote in the pasted text" and score it lower. Every theme says how many of my pieces mention it ("mentioned in 7 of 22"). A count is of my pasted pieces only; never call it a share of the market. Say once that reviews come only from people who chose to write, and that I should paste a mix (happy and unhappy, rivals and similar products).
+
+Keep it to one page: under 9,000 characters in total, one short sentence per line. Plain English, no jargon without a one-line gloss, insight density over length.
+
+Start with a heading "## Value Prop Sheet" and, directly above it, one line in italics: "This sheet holds: the top three jobs, pains and gains in your customers' own words, three ranked value propositions with a messaging angle, a so-what test for each, the one to try first, and a list for checking with five real people." Nothing before it. Then these sections, in this order, with these exact headings:
+
+1. INPUT CHECK ("## Input Check") — three short lines: "Idea:", "Customer:", "Evidence:" (how many pieces, what kinds, thin or enough), then "Gap:" (the competitor gap line, or "not given").
+
+2. CUSTOMER WORDS ("## Customer Words") — the four definitions above, then three short lists headed "**Top 3 jobs**", "**Top 3 pains**", "**Top 3 gains**". Each item: "1. the theme in plain words (mentioned in N of M) — "exact quote" [P#]". Rank by how many pieces mention it and how strongly. Where a theme is a stretch from the text, tag it "(inferred)".
+
+3. THREE VALUE PROPOSITIONS ("## Three Value Propositions") — VP1, VP2, VP3, ranked best first. Each is a block:
+   - "**VP1 — short name**" then one sentence in my customer's voice: the proposition.
+   - "**Built on:**" the job, pain or gain it uses, with the quote [P#].
+   - "**Messaging angle:**" one line on how to say it (a headline-style line plus the tone), using the customers' words where you can.
+   - "**Against the gap:**" one line on how it answers the competitor gap, or "gap not given".
+   - "**Rank because:**" one line: how many pieces back it and how strongly.
+   The three must differ in kind (for example one built on a pain, one on a gain, one on a job), not be three phrasings of the same idea. Never claim my offer can do something I didn't say it does; where a proposition needs a capability I haven't described, write "needs: [fill in] (is this true of your offer?)".
+
+4. SO-WHAT TEST ("## So-What Test") — the test is: a customer hears the proposition and answers "so what?". For each VP, two lines: "**VP1 — the customer asks back:**" the one question a sceptical customer would ask; "**The proposition must answer:**" the specific, checkable answer, with a number or a fact only if it comes from my inputs, otherwise the placeholder [fill in] for me to fill. Then a verdict word per VP: "Passes on the pasted evidence", "Needs proof: [fill in]" or "Fails: too generic (rivals could say it)". Be willing to give a Fails.
+
+5. THE ONE TO TRY ("## The One to Try") — "**Try:**" the VP, then one sentence why it goes first (strongest backing, passes the so-what test, hardest for rivals to copy), and the exact line to put in front of people.
+
+6. CHECK WITH FIVE REAL PEOPLE ("## Check With Five Real People") — a numbered list of five short steps: who (five people who match my customer, not friends or family), what to show (the one line only), the exact question to ask ("In your own words, what is this for?"), what to listen for, and the pass line and fail line to write down before asking (as something observable; put numbers only if they come from my inputs, else leave [fill in], plus the line: "Set the numbers before you ask, write them down, and don't change them after hearing the answers.").
+
+Then, each on its own line: "**Honest line:** This sheet reads the words you pasted. It shows what those customers said, not what all customers think, and an AI can group or phrase things wrongly, so check every quote against the source and check the winner with five real people."; "**Bottom Line:**" name the one to try in my customer's language and what answer from the five people would change my mind; "**Next step:** the paid Value Proposition kit goes deeper: a re-run routine for tracking customer words over time, a one-page proposition template, so-what test cards and an interview script for the five-people check. It sits beside this tool: https://systemyxventures.com/tools/"; then sign off in one line: "Industrial engineer. Building businesses in the age of AI. One system at a time."
+
+Never say whether my idea is good or bad, will work or will fail, or whether to build it. Never give a price, discount or code for the kit. Never present a quote as real unless it is in the text I pasted.</pre>
+  </div>
+</section>
